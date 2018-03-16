@@ -1,0 +1,12 @@
+C:/Categorized/Programming/RailsInstaller/Ruby2.2.0/bin/ruby.exe -r ./siteconf20180316-11956-1c6k0zw.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+generating cruby-i386-mingw32.def
+compiling cruby.c
+linking shared-object bindex/cruby.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20180316-11956-dextr9/bindex

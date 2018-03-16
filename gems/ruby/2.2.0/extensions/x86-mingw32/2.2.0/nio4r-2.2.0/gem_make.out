@@ -1,0 +1,10 @@
+C:/Categorized/Programming/RailsInstaller/Ruby2.2.0/bin/ruby.exe -r ./siteconf20180316-11956-1g5jvjt.rb extconf.rb
+
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+make "DESTDIR=" install
+make: Nothing to be done for `install'.
