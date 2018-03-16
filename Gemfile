@@ -21,6 +21,11 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# https://stackoverflow.com/questions/28312460/object-doesnt-support-this-property-or-method-rails-windows-64bit
+# problem with coffee script 12 in windows versions
+# version 1.4.0 is tested and works. Try it if 1.8.0 does not work.
+gem 'coffee-script-source', '~> 1.8.0'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -34,6 +39,12 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+gem 'devise', git: 'https://github.com/plataformatec/devise.git'
+gem 'cancancan'
+gem 'draper'
+gem 'pundit'
+gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin.git'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
