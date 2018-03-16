@@ -40,11 +40,14 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'devise', git: 'https://github.com/plataformatec/devise.git'
+gem 'rubocop', '>= 0.49.0'
+gem 'nokogiri', '>= 1.8.1'
+
+gem 'devise', '>= 4.4.2'
 gem 'cancancan'
 gem 'draper'
 gem 'pundit'
-gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin.git'
+gem 'activeadmin', '>= 1.2.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
