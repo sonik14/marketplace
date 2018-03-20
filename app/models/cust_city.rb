@@ -1,0 +1,2 @@
+class CustCity < ApplicationRecord
+end

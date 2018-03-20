@@ -1,0 +1,2 @@
+class CompQStore < ApplicationRecord
+end

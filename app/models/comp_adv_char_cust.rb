@@ -1,0 +1,2 @@
+class CompAdvCharCust < ApplicationRecord
+end

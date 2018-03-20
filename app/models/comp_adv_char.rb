@@ -1,0 +1,2 @@
+class CompAdvChar < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class NeedScore < ApplicationRecord
+end

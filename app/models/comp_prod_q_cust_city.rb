@@ -1,0 +1,2 @@
+class CompProdQCustCity < ApplicationRecord
+end

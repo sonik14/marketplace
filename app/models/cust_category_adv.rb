@@ -1,0 +1,2 @@
+class CustCategoryAdv < ApplicationRecord
+end

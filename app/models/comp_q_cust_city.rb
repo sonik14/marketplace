@@ -1,0 +1,2 @@
+class CompQCustCity < ApplicationRecord
+end

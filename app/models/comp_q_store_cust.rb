@@ -1,0 +1,2 @@
+class CompQStoreCust < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class CustProdChar < ApplicationRecord
+end

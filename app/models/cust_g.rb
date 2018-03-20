@@ -1,0 +1,2 @@
+class CustG < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class CompAdvQMedium < ApplicationRecord
+end

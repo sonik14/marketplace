@@ -1,0 +1,2 @@
+class CompProdAdv < ApplicationRecord
+end

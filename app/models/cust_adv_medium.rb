@@ -1,0 +1,2 @@
+class CustAdvMedium < ApplicationRecord
+end

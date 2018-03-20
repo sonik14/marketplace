@@ -1,0 +1,2 @@
+class CompQPrior < ApplicationRecord
+end

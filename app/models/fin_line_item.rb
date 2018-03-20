@@ -1,0 +1,2 @@
+class FinLineItem < ApplicationRecord
+end

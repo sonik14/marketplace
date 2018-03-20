@@ -1,0 +1,2 @@
+class CustGMqCity < ApplicationRecord
+end

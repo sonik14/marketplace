@@ -1,0 +1,2 @@
+class CompQWeb < ApplicationRecord
+end

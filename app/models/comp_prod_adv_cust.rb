@@ -1,0 +1,2 @@
+class CompProdAdvCust < ApplicationRecord
+end

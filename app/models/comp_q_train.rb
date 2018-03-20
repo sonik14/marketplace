@@ -1,0 +1,2 @@
+class CompQTrain < ApplicationRecord
+end

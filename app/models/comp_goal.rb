@@ -1,0 +1,2 @@
+class CompGoal < ApplicationRecord
+end

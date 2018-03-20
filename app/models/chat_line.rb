@@ -1,0 +1,2 @@
+class ChatLine < ApplicationRecord
+end

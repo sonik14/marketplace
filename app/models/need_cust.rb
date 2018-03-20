@@ -1,0 +1,2 @@
+class NeedCust < ApplicationRecord
+end

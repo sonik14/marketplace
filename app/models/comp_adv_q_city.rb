@@ -1,0 +1,2 @@
+class CompAdvQCity < ApplicationRecord
+end

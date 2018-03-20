@@ -1,0 +1,2 @@
+class CompQLoan < ApplicationRecord
+end

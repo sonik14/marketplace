@@ -1,0 +1,2 @@
+class CompAdvQ < ApplicationRecord
+end

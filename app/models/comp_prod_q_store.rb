@@ -1,0 +1,2 @@
+class CompProdQStore < ApplicationRecord
+end

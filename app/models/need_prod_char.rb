@@ -1,0 +1,2 @@
+class NeedProdChar < ApplicationRecord
+end

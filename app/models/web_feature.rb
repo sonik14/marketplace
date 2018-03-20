@@ -1,0 +1,2 @@
+class WebFeature < ApplicationRecord
+end

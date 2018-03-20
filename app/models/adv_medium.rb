@@ -1,0 +1,2 @@
+class AdvMedium < ApplicationRecord
+end

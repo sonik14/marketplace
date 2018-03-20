@@ -1,0 +1,2 @@
+class CompRnd < ApplicationRecord
+end

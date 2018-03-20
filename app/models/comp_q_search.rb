@@ -1,0 +1,2 @@
+class CompQSearch < ApplicationRecord
+end

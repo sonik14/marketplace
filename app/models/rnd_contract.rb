@@ -1,0 +1,2 @@
+class RndContract < ApplicationRecord
+end

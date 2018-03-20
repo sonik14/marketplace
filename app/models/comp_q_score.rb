@@ -1,0 +1,2 @@
+class CompQScore < ApplicationRecord
+end

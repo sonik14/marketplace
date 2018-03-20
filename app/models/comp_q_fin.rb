@@ -1,0 +1,2 @@
+class CompQFin < ApplicationRecord
+end

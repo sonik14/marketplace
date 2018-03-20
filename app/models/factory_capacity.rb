@@ -1,0 +1,2 @@
+class FactoryCapacity < ApplicationRecord
+end
