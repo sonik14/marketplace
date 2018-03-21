@@ -42,6 +42,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'rubocop', '>= 0.49.0'
 gem 'nokogiri', '>= 1.8.1'
+gem 'loofah', '>=2.2.1'
 
 gem 'devise', '>= 4.4.2'
 gem 'cancancan'
