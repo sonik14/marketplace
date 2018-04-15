@@ -1,6 +1,6 @@
 class CreateRndContracts < ActiveRecord::Migration[5.0]
-  def change
-  # to be deleted
+  ## to be deleted (no usability anymore)
+  #def change
   #  create_table :rnd_contracts do |t|
 
    #   t.belongs_to :company, foreign_key: true
@@ -11,5 +11,5 @@ class CreateRndContracts < ActiveRecord::Migration[5.0]
    # end
     #add_foreign_key :comp_rnd_buys, :comp_rnd_buys, column: :provider
    # add_index :comp_rnds, [:company_id, :prod_char_id], unique: true
-  end
+  #end
 end
