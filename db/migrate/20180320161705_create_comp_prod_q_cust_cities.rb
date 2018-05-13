@@ -15,6 +15,6 @@ class CreateCompProdQCustCities < ActiveRecord::Migration[5.0]
       #(influence in product rating for that amount of customers)
       t.timestamps
     end
-    add_index :comp_prod_q_cust_cities, [:comp_prod_id, :comp_q_cust_city_id], unique: true
+    add_index :comp_prod_q_cust_cities, [:comp_prod_id, :comp_q_cust_city_id], unique: true, name: 'index_comp_prod_q_cust_cities_on_cpqcc'
   end
 end

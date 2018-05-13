@@ -1,0 +1,2 @@
+class CompQEduc < ApplicationRecord
+end

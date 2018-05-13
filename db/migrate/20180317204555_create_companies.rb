@@ -11,7 +11,7 @@ class CreateCompanies < ActiveRecord::Migration[5.0]
       t.timestamps
     end
     add_foreign_key :companies, :users, column: :ceo_id, null: false
-    add_index :companies, [:game_id, :ceo_id], unique: true, index: true
+    add_index :companies, [:game_id, :ceo_id], unique: true
     # same user only up to 1 company per game
   end
 end

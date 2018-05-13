@@ -10,6 +10,6 @@ class CreateCustGs < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
-    add_index :cust_gs, [:customer_id, :game_id], unique: true, index: true
+    add_index :cust_gs, [:customer_id, :game_id], unique: true
   end
 end

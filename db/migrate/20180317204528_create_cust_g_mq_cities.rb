@@ -26,6 +26,6 @@ class CreateCustGMqCities < ActiveRecord::Migration[5.0]
       # the actual rebuy number is also stored there
       t.timestamps
     end
-    add_index :cust_g_mq_cities, [:cust_city_id, :mq_id], unique: true, index: true
+    add_index :cust_g_mq_cities, [:cust_city_id, :mq_id], unique: true
   end
 end

@@ -10,6 +10,6 @@ class CreateCompProdAdvCusts < ActiveRecord::Migration[5.0]
       t.integer :advEval, unsigned: true, limit: 1
       t.timestamps
     end
-    add_index :comp_adv_chars, [:comp_prod_id, :comp_adv_id, :customer_id], unique: true
+    add_index :comp_prod_adv_custs, [:comp_prod_id, :comp_adv_id, :customer_id], unique: true, name: 'index_comp_prod_adv_custs_on_comp_prod_comp_adv_customer'
   end
 end

@@ -19,9 +19,12 @@ class CreateCompQs < ActiveRecord::Migration[5.0]
       t.integer :noIllTot, unsigned: true #ACTUAL no of lost demand because of CURRENT shortage of stock
 
       t.integer :salaryE, unsigned: true #employee
+      t.integer :insurance_e_id
+      t.integer :vacationE, unsigned: true, limit: 1 #no of weeks
+      t.decimal :pensionE, unsigned: true, precision: 3, scale: 2 #percent
 
       t.integer :salaryW, unsigned: true #worker
-      t.belongs_to :health_continent, foreign_key: true
+      t.integer :insurance_w_id
       t.integer :vacationW, unsigned: true, limit: 1 #no of weeks
       t.decimal :pensionW, unsigned: true, precision: 3, scale: 2 #percent
 
@@ -45,6 +48,8 @@ class CreateCompQs < ActiveRecord::Migration[5.0]
       t.integer :educationTotC, unsigned: true
       t.timestamps
     end
+    add_foreign_key :comp_qs, :healths, column: :insurance_e_id
+    add_foreign_key :comp_qs, :healths, column: :insurance_w_id
     add_index :comp_qs, [:company_id, :quarter_id], unique: true
   end
 end

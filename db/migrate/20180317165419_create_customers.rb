@@ -10,7 +10,7 @@ class CreateCustomers < ActiveRecord::Migration[5.0]
       t.decimal  :purchaseP, unsigned: true, precision: 3, scale: 2
       t.numrange :rebuyPer_range
       # the range in the percentage of the customer who will buy again within the rebuyInterval period
-      t.numrange :rebuyInterval_range, unsigned: true, limit: 1
+      t.numrange :rebuyInterval_range, unsigned: true
       # within these amount of quarters, we take rebuyers into consideration
       t.integer :rebuyPar, limit: 1
       # values: [-5, 5], -5 => next buy will be different kind of computer

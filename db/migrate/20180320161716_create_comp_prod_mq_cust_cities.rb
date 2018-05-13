@@ -12,6 +12,6 @@ class CreateCompProdMqCustCities < ActiveRecord::Migration[5.0]
       t.integer :noRebuys, unsigned: true
       t.timestamps
     end
-    add_index :comp_prod_mq_cust_cities, [:mq_id, :comp_prod_q_cust_city_id], unique: true
+    add_index :comp_prod_mq_cust_cities, [:mq_id, :comp_prod_q_cust_city_id], unique: true, name: 'index_comp_prod_mq_cust_cities_on_cpmqcc'
   end
 end

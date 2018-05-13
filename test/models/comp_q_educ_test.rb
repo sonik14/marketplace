@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CompQTrainTest < ActiveSupport::TestCase
+class CompQEducTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

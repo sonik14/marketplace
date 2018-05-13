@@ -14,7 +14,7 @@ class CreateCompProdQWebs < ActiveRecord::Migration[5.0]
       t.integer :Seq, unsigned: true #sequence in sorting products on website (1 first product etc)
       t.timestamps
     end
-    add_index :comp_prod_q_stores, [:comp_prod_q_id, :comp_q_web_id], unique: true
-    add_index :comp_prod_q_stores, [:comp_prod_q_id, :comp_q_web_id, :Seq], unique: true
+    add_index :comp_prod_q_webs, [:comp_prod_q_id, :comp_q_web_id], unique: true
+    add_index :comp_prod_q_webs, [:comp_prod_q_id, :comp_q_web_id, :Seq], unique: true, name: 'index_comp_prod_q_webs_on_prod_q_and_web_and_Seq'
   end
 end
