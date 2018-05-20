@@ -4,6 +4,7 @@ class CreateGames < ActiveRecord::Migration[5.0]
 
       t.belongs_to :version, foreign_key: true, null: false
 
+      t.integer :first_month_id
       t.integer :starting_year, unsigned: true
       t.integer :duration, unsigned: true, limit: 1
       t.integer :func_changeover_id
@@ -14,6 +15,7 @@ class CreateGames < ActiveRecord::Migration[5.0]
       t.integer :current_quarter, unsigned: true, limit: 1
       t.timestamps
     end
+    add_foreign_key :games, :months, column: :first_month_id
     add_foreign_key :games, :functions, column: :func_changeover_id
   end
 end

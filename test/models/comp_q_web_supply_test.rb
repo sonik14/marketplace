@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CompQWebContTest < ActiveSupport::TestCase
+class CompQWebSupplyTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

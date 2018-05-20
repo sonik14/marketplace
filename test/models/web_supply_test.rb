@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class WebContTest < ActiveSupport::TestCase
+class WebSupplyTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

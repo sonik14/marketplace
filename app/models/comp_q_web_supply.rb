@@ -1,0 +1,2 @@
+class CompQWebSupply < ApplicationRecord
+end

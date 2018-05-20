@@ -3,7 +3,7 @@ class CreateQuarters < ActiveRecord::Migration[5.0]
     create_table :quarters do |t|
 
       t.belongs_to :game, foreign_key: true, null: false
-      t.integer :first_month_id
+      t.integer :q_no, null: false, index: true
       
       t.integer :func_demand_id
       t.decimal :parA
@@ -16,8 +16,7 @@ class CreateQuarters < ActiveRecord::Migration[5.0]
       t.integer :funding_amount_max, unsigned: true
       t.timestamps
     end
-    add_foreign_key :quarters, :games, column: :first_month_id
     add_foreign_key :quarters, :functions, column: :func_demand_id
-    add_index :quarters, [:game_id, :first_month_id], unique: true
+    add_index :quarters, [:game_id, :q_no], unique: true
   end
 end

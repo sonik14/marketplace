@@ -1,0 +1,2 @@
+class WebSupply < ApplicationRecord
+end

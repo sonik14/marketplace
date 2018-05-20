@@ -1,2 +1,0 @@
-class CompQWebCont < ApplicationRecord
-end
