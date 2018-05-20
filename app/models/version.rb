@@ -13,10 +13,17 @@ class Version < ApplicationRecord
   has_many :web_features
   
   has_many :continents
+  has_many :health_e_ids, through: :continents, source: :health_e
+  has_many :health_w_ids, through: :continents, source: :health_w
 
   has_many :customers
+  has_many :func_price_ids, through: :customers, source: :func_price
+  has_many :a_appear_city_ids, through: :customers, source: :a_appear_city
+  has_many :a_appear_media_ids, through: :customers, source: :a_appear_media
 
   has_many :games
+  has_many :func_changeover_ids, through: :games, source: :func_changeover
 
   has_many :scores
+  has_many :functions, through: :scores
 end

@@ -4,6 +4,8 @@ class AdvChar < ApplicationRecord
   belongs_to :prod_char
 
   has_many :cust_adv_chars
+  has_many :customers, through: :cust_adv_chars
 
   has_many :comp_adv_chars
+  has_many :comp_advs, through: :comp_adv_chars
 end

@@ -4,6 +4,8 @@ class Need < ApplicationRecord
   has_many :need_scores
 
   has_many :need_custs
+  has_many :customers, through: :need_custs
 
   has_many :need_prod_chars
+  has_many :customers, through: :need_prod_chars
 end
