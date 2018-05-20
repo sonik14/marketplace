@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CompProdQCustTest < ActiveSupport::TestCase
+class CompProdCustTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

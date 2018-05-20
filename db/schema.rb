@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180320161740) do
+ActiveRecord::Schema.define(version: 20180520192739) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -188,7 +188,7 @@ ActiveRecord::Schema.define(version: 20180320161740) do
   end
 
   create_table "comp_prod_adv_custs", force: :cascade do |t|
-    t.integer  "comp_prod_id",           null: false
+    t.integer  "comp_prod_id"
     t.integer  "comp_adv_id",            null: false
     t.integer  "customer_id",            null: false
     t.integer  "advEval",      limit: 2
@@ -533,7 +533,7 @@ ActiveRecord::Schema.define(version: 20180320161740) do
     t.integer  "buyer_id"
     t.integer  "prod_id"
     t.integer  "quarter_id"
-    t.integer  "quarterO_id"
+    t.integer  "quarter_o_id"
     t.integer  "quarterM",       limit: 2, default: 255
     t.integer  "price"
     t.integer  "advancePayment",           default: 0
@@ -550,7 +550,7 @@ ActiveRecord::Schema.define(version: 20180320161740) do
     t.index ["buyer_id", "prod_id", "cancelled"], name: "index_comp_rnds_on_prod_avail", using: :btree
     t.index ["quarter_id"], name: "index_comp_rnds_on_quarter_id", using: :btree
     t.index ["seller_id", "buyer_id", "prod_id", "cancelled"], name: "index_comp_rnds_on_same_open_contract", using: :btree
-    t.index ["seller_id", "prod_id", "quarterO_id", "cancelled"], name: "index_comp_rnds_on_buyer_id_as_seller_id", using: :btree
+    t.index ["seller_id", "prod_id", "quarter_o_id", "cancelled"], name: "index_comp_rnds_on_buyer_id_as_seller_id", using: :btree
   end
 
   create_table "comp_users", force: :cascade do |t|
@@ -1172,7 +1172,7 @@ ActiveRecord::Schema.define(version: 20180320161740) do
   add_foreign_key "comp_rnds", "companies", column: "seller_id"
   add_foreign_key "comp_rnds", "prod_chars", column: "prod_id"
   add_foreign_key "comp_rnds", "quarters"
-  add_foreign_key "comp_rnds", "quarters", column: "quarterO_id"
+  add_foreign_key "comp_rnds", "quarters", column: "quarter_o_id"
   add_foreign_key "comp_users", "companies"
   add_foreign_key "comp_users", "users"
   add_foreign_key "companies", "continents"

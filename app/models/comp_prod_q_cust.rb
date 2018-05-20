@@ -1,2 +1,0 @@
-class CompProdQCust < ApplicationRecord
-end

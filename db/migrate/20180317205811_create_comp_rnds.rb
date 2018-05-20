@@ -6,10 +6,10 @@ class CreateCompRnds < ActiveRecord::Migration[5.0]
       t.integer :buyer_id
       t.integer :prod_id
       t.belongs_to :quarter, foreign_key: true
-      t.integer :quarterO_id # obtained
+      t.integer :quarter_o_id # obtained
       # provider-> if null => system
       # quarter -> null (contract brake)
-      # quarterO_id <= current Quarter => company possess the RnD
+      # quarter_o_id <= current Quarter => company possess the RnD
       t.integer :quarterM, unsigned: true, limit: 1, default: 255 #max obtained
       t.integer :price, unsigned: true #price paid by buyer_id (per quarter otan agora apo systhma, alliws efapaks metaksu epixeirhsewn)
       t.integer :advancePayment, unsigned: true, default: 0 #instant payment without guarantees after both have signed
@@ -28,9 +28,9 @@ class CreateCompRnds < ActiveRecord::Migration[5.0]
     add_foreign_key :comp_rnds, :companies, column: :seller_id
     add_foreign_key :comp_rnds, :companies, column: :buyer_id, null: false
     add_foreign_key :comp_rnds, :prod_chars, column: :prod_id, null: false
-    add_foreign_key :comp_rnds, :quarters, column: :quarterO_id
+    add_foreign_key :comp_rnds, :quarters, column: :quarter_o_id
 
-    add_index :comp_rnds, [:seller_id, :prod_id, :quarterO_id, :cancelled], name: 'index_comp_rnds_on_buyer_id_as_seller_id'
+    add_index :comp_rnds, [:seller_id, :prod_id, :quarter_o_id, :cancelled], name: 'index_comp_rnds_on_buyer_id_as_seller_id'
     add_index :comp_rnds, [:buyer_id, :prod_id, :cancelled], name: 'index_comp_rnds_on_prod_avail'
     add_index :comp_rnds, [:seller_id, :buyer_id, :prod_id, :cancelled], name: 'index_comp_rnds_on_same_open_contract'
     add_index :comp_rnds, [:buyer_id, :prod_id, :cancelled, :signedS, :signedB], name: 'index_comp_rnds_on_uniqueness'
@@ -44,12 +44,12 @@ class CreateCompRnds < ActiveRecord::Migration[5.0]
 # do not sell to your own company
 # Check that the signed Quarter is the current
 # Check that the selling product is in RnD category
-# Check if someone tries to sell an RnD earlier than when it will be ready and prevent it (earliest quarterO_id)
+# Check if someone tries to sell an RnD earlier than when it will be ready and prevent it (earliest quarter_o_id)
 # Check that this specific RnD is available at the current quarter (prod_char -> avail)
 # Check that the company has the rights to sell the specific RnD
 # Check that only 1 contract is in prosses for a specific RnD between 2 specific companies. (no duplicates)
 
-# Check that the company possess the RnD or it has signed to have it earlier than the selling quarter (quarterO)
+# Check that the company possess the RnD or it has signed to have it earlier than the selling quarter (quarter_o)
 # (So check if RnD will be ready the time the company wants to sell it)
 
 
@@ -82,12 +82,12 @@ class CreateCompRnds < ActiveRecord::Migration[5.0]
           avail boolean;
           system integer;
           seller_id integer;
-          quarterO_id integer;
+          quarter_o_id integer;
           resale boolean;
         BEGIN
           IF NEW.buyer_id = NEW.seller_id THEN
             RAISE EXCEPTION 'You cannot sell an item to your company!';
-          ELSEIF (NEW.quarterO_id<=NEW.quarter_id) OR (NEW.quarterM<NEW.quarterO_id) THEN
+          ELSEIF (NEW.quarter_o_id<=NEW.quarter_id) OR (NEW.quarterM<NEW.quarter_o_id) THEN
                 RAISE EXCEPTION 'Program Error! Quarter obtained is not in the future!';
           END IF;
           avail = (SELECT avail FROM prod_chars WHERE id=NEW.prod_id);
@@ -100,13 +100,13 @@ class CreateCompRnds < ActiveRecord::Migration[5.0]
           system = (SELECT MIN(id) FROM companies);
           IF NEW.seller_id!=system THEN
             seller_id = NULL;
-            SELECT id, quarterO_id, saleRightsB INTO seller_id, quarterO_id, resale FROM comp_rnds
+            SELECT id, quarter_o_id, saleRightsB INTO seller_id, quarter_o_id, resale FROM comp_rnds
                 WHERE buyer_id=NEW.seller_id AND prod_id=NEW.prod_id AND cancelled=false AND signedS=true AND signedB=true;
             IF seller_id IS NULL THEN
               RAISE EXCEPTION 'You cannot sell an item that you do not possess!';
             ELSEIF resale IS FALSE THEN
               RAISE EXCEPTION 'You do not have the rights to sell this RnD';
-            ELSEIF NEW.quarterO_id < quarterO_id THEN
+            ELSEIF NEW.quarter_o_id < quarter_o_id THEN
               RAISE EXCEPTION 'RnD will not be ready the time you want to sell it.\n Please change the quarter!';           
             END IF;
           END IF;
@@ -151,7 +151,7 @@ class CreateCompRnds < ActiveRecord::Migration[5.0]
             RAISE EXCEPTION 'The contract is locked, because it has already been rejected or failed!'; 
           ELSEIF (OLD.signedS IS TRUE) AND (OLD.signedB IS TRUE) THEN
   
-            NEW.quarterO_id=OLD.quarterO_id;
+            NEW.quarter_o_id=OLD.quarter_o_id;
             NEW.quarterM=OLD.quarterM;
             NEW.price=OLD.price;
             NEW.advancePayment=OLD.advancePayment;
@@ -164,37 +164,37 @@ class CreateCompRnds < ActiveRecord::Migration[5.0]
   
             IF (NEW.seller_id = system) THEN
               -- check sta oikonomika an vgainei na ependusei (den einai tokoglufo h den prokeitai na mpei)
-                IF (NEW.quarterO_id = quarter) THEN -- kai den mporei na antepekselthei oikonomika (flag apo prin)
+                IF (NEW.quarter_o_id = quarter) THEN -- kai den mporei na antepekselthei oikonomika (flag apo prin)
                   penalty = NEW.delayPenalty; 
                   penalty = (SELECT 
                       SUM(case when quarterM=quarter then penalty when quarterM>quarter then delayPenalty else 0 end)
                       FROM comp_rnds
-                      WHERE seller_id=NEW.buyer_id AND prod_id=NEW.prod_id AND quarterO_id=quarter AND cancelled=false);
+                      WHERE seller_id=NEW.buyer_id AND prod_id=NEW.prod_id AND quarter_o_id=quarter AND cancelled=false);
                   IF (penalty < NEW.price) THEN
                     -- to cancel sto sumvolaio pou exei plirwthei h rhtra tha ginei meta me elegxo ston pinaka twn agorwn
-                    IF (NEW.quarterO_id=NEW.quarter_id+1) THEN
+                    IF (NEW.quarter_o_id=NEW.quarter_id+1) THEN
                       NEW.cancelled=true;
                     ELSE
-                      NEW.quarterO_id=NEW.quarterO_id+1;
-                      remaining = NEW.quarterO_id-quarter;
+                      NEW.quarter_o_id=NEW.quarter_o_id+1;
+                      remaining = NEW.quarter_o_id-quarter;
                       NEW.price = NEW.price*(remaining+1)/remaining;
                       -- insert sta oikonomika to kostos kathisterisis enos triminou tou RnD (delayPenalty)
                     END IF;
                   ELSE         
                     -- insert sta oikonomika ta kosth gia oloklhrwsh RnD
-                    INSERT INTO comp_rnds (company_id, prod, quarterO_id)
+                    INSERT INTO comp_rnds (company_id, prod, quarter_o_id)
                     VALUES (NEW.seller_id, NEW.prod_id, quarter);
                   END IF;
-                ELSEIF (NEW.quarterO_id > quarter) THEN
+                ELSEIF (NEW.quarter_o_id > quarter) THEN
                   IF (NEW.quarter_id=quarter) THEN
                     NEW.cancelled=true;
                   ELSE
-                    remaining = NEW.quarterO_id-quarter;
+                    remaining = NEW.quarter_o_id-quarter;
                     NEW.price = NEW.price*(remaining+1)/remaining;
                     -- insert sta oikonomika to kostos kathisterisis gia ton agorasth enos triminou tou RnD (delayPenalty)
                   END IF;
                 END IF;
-              -- ELSEIF (quarterO_id >= quarter) THEN ta kosth gia epomeno vhma RnD
+              -- ELSEIF (quarter_o_id >= quarter) THEN ta kosth gia epomeno vhma RnD
             
   
             ELSEIF (NEW.cancelled IS TRUE) AND (NEW.quarterM >= quarter) THEN
@@ -204,10 +204,10 @@ class CreateCompRnds < ActiveRecord::Migration[5.0]
             END IF;
   
   
-          ELSEIF NEW.quarterO_id <
-                (SELECT quarterO_id FROM comp_rnds WHERE buyer_id=NEW.seller_id AND prod_id=NEW.prod_id AND cancelled=false) THEN
+          ELSEIF NEW.quarter_o_id <
+                (SELECT quarter_o_id FROM comp_rnds WHERE buyer_id=NEW.seller_id AND prod_id=NEW.prod_id AND cancelled=false) THEN
             RAISE EXCEPTION 'RnD will not be ready the time you want to sell it.\n Please change the quarter!'; 
-          ELSEIF OLD.quarterO_id!=NEW.quarterO_id OR OLD.quarterM!=NEW.quarterM OR OLD.price!=NEW.price OR
+          ELSEIF OLD.quarter_o_id!=NEW.quarter_o_id OR OLD.quarterM!=NEW.quarterM OR OLD.price!=NEW.price OR
               OLD.advancePayment!=NEW.advancePayment OR OLD.penalty!=NEW.penalty OR OLD.delayPenalty!=NEW.delayPenalty OR
               OLD.resaleRightsS!=NEW.resaleRightsS OR OLD.resaleRightsB!=NEW.resaleRightsB THEN
             IF (OLD.signedS IS TRUE) THEN
