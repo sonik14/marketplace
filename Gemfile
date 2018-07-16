@@ -8,6 +8,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.6'
+#since 5.1 before filters are removed and active admin uses them
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
@@ -42,6 +43,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'rubocop', '>= 0.49.0'
 gem 'nokogiri', '>= 1.8.1'
+gem 'loofah', '>=2.2.1'
 
 gem 'devise', '>= 4.4.2'
 gem 'cancancan'
@@ -51,7 +53,7 @@ gem 'activeadmin', '>= 1.2.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
+  gem 'byebug'
 end
 
 group :development do
