@@ -8,7 +8,6 @@ class CreateCompAdvQs < ActiveRecord::Migration[5.0]
 
       t.integer :appearancesPPTot, unsigned: true
       t.integer :TotCPP, unsigned: true
-      t.integer :evaluation, unsigned: true, limit: 1
       t.timestamps
     end
   	add_index :comp_adv_qs, [:quarter_id, :comp_adv_id], unique: true

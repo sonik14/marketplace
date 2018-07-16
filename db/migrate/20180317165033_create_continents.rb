@@ -4,7 +4,7 @@ class CreateContinents < ActiveRecord::Migration[5.0]
 
       t.belongs_to :version, foreign_key: true, null: false
 
-      t.string :name, unique: true, index: true, null: false
+      t.string :name, index: true, null: false
       t.string :factoryCityName
       t.decimal :salaryWI, unsigned: true, precision: 3, scale: 2
       t.integer :salaryWC, unsigned: true
@@ -33,7 +33,7 @@ class CreateContinents < ActiveRecord::Migration[5.0]
       #sto cities an h timh diaforetikh ana polh sthn idia hpeiro
       t.integer :storeSetupC, unsigned: true
       t.integer :storeClosureC, unsigned: true
-      t.integer :StoreLeaseC, unsigned: true
+      t.integer :storeLeaseC, unsigned: true
       t.integer :hireEC, unsigned: true
       t.integer :dismissEC, unsigned: true
 
@@ -42,6 +42,7 @@ class CreateContinents < ActiveRecord::Migration[5.0]
       t.integer :webLeaseC, unsigned: true
       t.timestamps
     end
+    add_index :continents, [:version_id, :name], unique: true
     add_foreign_key :continents, :healths, column: :health_w_id
     add_foreign_key :continents, :healths, column: :health_e_id
   end

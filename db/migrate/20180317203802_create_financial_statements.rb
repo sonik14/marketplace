@@ -4,7 +4,7 @@ class CreateFinancialStatements < ActiveRecord::Migration[5.0]
 
       t.belongs_to :version, foreign_key: true, null: false
 
-      t.string :type, unique: true, index: true, null: false # cash, balance, income sheets
+      t.string :usage, unique: true, index: true, null: false # cash, balance, income sheets
       t.timestamps
     end
   end

@@ -5,7 +5,8 @@ class CreateMqs < ActiveRecord::Migration[5.0]
       t.belongs_to :month, foreign_key: true, null: false
       t.belongs_to :quarter, foreign_key: true, null: false, index: true
 
-      t.numrange :demandP # Predicted demand Range included Seasonality
+      t.integer :demandPmin, unsigned: true # Predicted demand Range included Seasonality
+      t.integer :demandPmax, unsigned: true
       # (the amount of demand exported from function taking into consideration randomness [rangeDemandPer])
       t.integer  :demandS, unsigned: true # demand from Simulation
       # the exact simulated demand will be within the demandP range

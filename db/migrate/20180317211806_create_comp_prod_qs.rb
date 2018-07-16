@@ -18,8 +18,7 @@ class CreateCompProdQs < ActiveRecord::Migration[5.0]
       t.integer :TotIncomePP, unsigned: true
       t.integer :TotExpensesPP, unsigned: true
       t.integer :TotGrossMarginPP, unsigned: true
-      t.integer :evaluationPrice, unsigned: true, limit: 1
-      t.integer :evaluationQuality, unsigned: true, limit: 1
+      t.integer :qualityEval, unsigned: true, limit: 1
       t.timestamps
     end
     add_index :comp_prod_qs, [:quarter_id, :comp_prod_id], unique: true

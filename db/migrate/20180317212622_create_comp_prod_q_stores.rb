@@ -13,6 +13,9 @@ class CreateCompProdQStores < ActiveRecord::Migration[5.0]
       t.integer :discount, unsigned: true
       t.integer :Seq, unsigned: true #sequence in selfs of stores (1 in the most visible self etc)
       t.boolean :promotionPrior, default: false #promotion Priority of the Employees
+
+      t.integer :priceEval, unsigned: true, limit: 1
+
       t.timestamps
     end
     add_index :comp_prod_q_stores, [:comp_prod_q_id, :comp_q_store_id], unique: true

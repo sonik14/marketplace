@@ -11,6 +11,6 @@ class CreateFunctionGs < ActiveRecord::Migration[5.0]
       
       t.timestamps
     end
-    add_index :function_gs, [:cust_func_id, :game_id], unique: true
+    add_index :function_gs, [:function_id, :game_id], unique: true
   end
 end

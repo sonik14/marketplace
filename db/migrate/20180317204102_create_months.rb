@@ -7,7 +7,8 @@ class CreateMonths < ActiveRecord::Migration[5.0]
       t.integer :no, unsigned: true
       t.string  :name, index: true, null: false
       t.integer :noDays, unsigned: true, index: true, null: false, default: 30
-      t.decimal :seasonPer, precision: 3, scale: 2
+      t.decimal :seasonPer, precision: 6, scale: 2
+      # find 2 KKMO(12) and then each LE
       # the following two will be used only if every month of every year will be stored in the database
       # example: January 2018 and then January 2019 etc
       t.integer :firstDayNo, unsigned: true

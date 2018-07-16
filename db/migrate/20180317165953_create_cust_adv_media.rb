@@ -4,10 +4,11 @@ class CreateCustAdvMedia < ActiveRecord::Migration[5.0]
 
       t.belongs_to :adv_medium, foreign_key: true, null: false
       t.belongs_to :customer, foreign_key: true, null: false
-      t.numrange :range, unsigned: true
-      # Διαβάθμιση για κάθε τύπο καταναλωτή σε decimal.
-      # ΠΧ 0-40 για σπορτς. 40-41 για οικονομικά, 41-75 κουτσομπολίστικα
-      # με άθροισμα 100 για κάθε τύπο όταν έχουν αντιστοιχιστεί όλα τα media.
+      t.decimal    :shareRmin, unsigned: true, precision: 5, scale: 4
+      t.decimal    :shareRmax, unsigned: true, precision: 5, scale: 4
+      # Diavathmisi gia kathe typo katanalwth se decimal.
+      # Px: 0-40 gia sports, 40-41 oikonomika, 41-75 koutsompolistika
+      # me athroisma 100 gia kathe typo otan exoun antistoixistei ola ta media.
       t.decimal :interest, unsigned: true, precision: 3, scale: 2
       # interest is extracted by the previous range (so it can be omitted)
       # (max-min)/100 (As a percent)

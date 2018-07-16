@@ -4,10 +4,19 @@ class CreateCustFuncs < ActiveRecord::Migration[5.0]
 
       t.belongs_to :customer, foreign_key: true, null: false, index: true
       t.belongs_to :function, foreign_key: true, null: false
-      t.numrange :parA
-      t.numrange :parB
-      t.numrange :parC
-      t.numrange :parD
+
+      t.float  :parAmin
+      t.float  :parAmax
+      t.float  :parAdef
+      t.float  :parBmin
+      t.float  :parBmax
+      t.float  :parBdef
+      t.float  :parCmin
+      t.float  :parCmax
+      t.float  :parCdef
+      t.float  :parDmin
+      t.float  :parDmax
+      t.float  :parDdef
 
       t.timestamps
     end
