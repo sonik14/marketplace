@@ -1,0 +1,20 @@
+current directory: D:/Documents/RubyProjects/marketplace/gems/ruby/2.3.0/gems/byebug-10.0.2/ext/byebug
+C:/Categorized/Programming/Ruby23/bin/ruby.exe -r ./siteconf20180708-20700-1b461nv.rb extconf.rb
+creating Makefile
+
+current directory: D:/Documents/RubyProjects/marketplace/gems/ruby/2.3.0/gems/byebug-10.0.2/ext/byebug
+make "DESTDIR=" clean
+
+current directory: D:/Documents/RubyProjects/marketplace/gems/ruby/2.3.0/gems/byebug-10.0.2/ext/byebug
+make "DESTDIR="
+generating byebug-i386-mingw32.def
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+current directory: D:/Documents/RubyProjects/marketplace/gems/ruby/2.3.0/gems/byebug-10.0.2/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20180708-20700-1p279gk/byebug

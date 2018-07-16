@@ -1,0 +1,21 @@
+current directory: D:/Documents/RubyProjects/marketplace/gems/ruby/2.3.0/gems/puma-3.11.4/ext/puma_http11
+C:/Categorized/Programming/Ruby23/bin/ruby.exe -r ./siteconf20180708-20700-7uwp4x.rb extconf.rb
+checking for BIO_read() in -lcrypto... no
+checking for BIO_read() in -llibeay32... no
+creating Makefile
+
+current directory: D:/Documents/RubyProjects/marketplace/gems/ruby/2.3.0/gems/puma-3.11.4/ext/puma_http11
+make "DESTDIR=" clean
+
+current directory: D:/Documents/RubyProjects/marketplace/gems/ruby/2.3.0/gems/puma-3.11.4/ext/puma_http11
+make "DESTDIR="
+generating puma_http11-i386-mingw32.def
+compiling http11_parser.c
+compiling io_buffer.c
+compiling mini_ssl.c
+compiling puma_http11.c
+linking shared-object puma/puma_http11.so
+
+current directory: D:/Documents/RubyProjects/marketplace/gems/ruby/2.3.0/gems/puma-3.11.4/ext/puma_http11
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20180708-20700-1lnpwx1/puma
