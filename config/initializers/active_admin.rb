@@ -31,9 +31,15 @@ ActiveAdmin.setup do |config|
   #
   # To set no namespace by default, use:
   #   config.default_namespace = false
+  config.default_namespace = :admin
   #
   # Default:
   # config.default_namespace = :admin
+  #
+  # You can customize the settings for each namespace by using
+  # a namespace block. For example, to change the site title
+  # within a namespace:
+  #
   #
   # You can customize the settings for each namespace by using
   # a namespace block. For example, to change the site title
@@ -45,6 +51,10 @@ ActiveAdmin.setup do |config|
   #
   # This will ONLY change the title for the admin section. Other
   # namespaces will continue to use the main "site_title" configuration.
+  config.namespace :data do |data|
+    data.authentication_method = :authenticate_user!
+    data.root_to = '/data/dashboard#index'
+  end
 
   # == User Authentication
   #
@@ -119,7 +129,7 @@ ActiveAdmin.setup do |config|
   # This allows your users to comment on any resource registered with Active Admin.
   #
   # You can completely disable comments:
-  # config.comments = false
+  config.comments = false
   #
   # You can change the name under which comments are registered:
   # config.comments_registration_name = 'AdminComment'
