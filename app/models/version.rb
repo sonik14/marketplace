@@ -26,4 +26,8 @@ class Version < ApplicationRecord
 
   has_many :scores
   has_many :functions, through: :scores
+  validates :illPerRmin, numericality: {greater_than_or_equal_to: 0, less_than_or_equal_to: 1}
+
+  validates :mainNo, presence: true, numericality: {greater_than: 0, only_integer: true}
+  validates :name, presence: true, uniqueness: true
 end

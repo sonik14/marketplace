@@ -8,4 +8,7 @@ class Health < ApplicationRecord
 
   has_many :insurance_employees, class_name: 'CompQ', foreign_key: 'insurance_e_id'
   has_many :insurance_workers, class_name: 'CompQ', foreign_key: 'insurance_w_id'
+
+  validates :version, presence: true
+  validates :name, presence: true, uniqueness: true
 end

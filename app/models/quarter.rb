@@ -1,6 +1,5 @@
 class Quarter < ApplicationRecord
   belongs_to :game
-  belongs_to :func_demand, class_name: 'Function'
 
   has_many :comp_adv_qs
   has_many :comp_rnds

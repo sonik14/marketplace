@@ -1,8 +1,5 @@
 class Customer < ApplicationRecord
   belongs_to :version
-  belongs_to :func_price, class_name: 'Function'
-  belongs_to :a_appear_city, class_name: 'Function'
-  belongs_to :a_appear_media, class_name: 'Function'
 
   has_many :cust_category_prods
   has_many :need_custs

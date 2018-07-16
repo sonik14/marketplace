@@ -1,6 +1,5 @@
 class ProdChar < ApplicationRecord
   belongs_to :category_prod
-  belongs_to :discount, class_name: 'Function'
 
   has_many :need_prod_chars
   has_many :adv_chars
