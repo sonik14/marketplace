@@ -1,5 +1,5 @@
 current directory: D:/Documents/RubyProjects/marketplace/gems/ruby/2.3.0/gems/puma-3.12.0/ext/puma_http11
-C:/Categorized/Programming/RailsInstaller/RailsInstaller/Ruby2.3.3/bin/ruby.exe -r ./siteconf20180716-24176-1tyc702.rb extconf.rb
+C:/ProgramsExcluded/Programming/RailsInstaller/Ruby2.3.3/bin/ruby.exe -r ./siteconf20180721-7228-12spp1m.rb extconf.rb
 checking for BIO_read() in -lcrypto... no
 checking for BIO_read() in -llibeay32... no
 creating Makefile
@@ -22,4 +22,4 @@ linking shared-object puma/puma_http11.so
 
 current directory: D:/Documents/RubyProjects/marketplace/gems/ruby/2.3.0/gems/puma-3.12.0/ext/puma_http11
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20180716-24176-1s6zu04/puma
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20180721-7228-d4unsf/puma

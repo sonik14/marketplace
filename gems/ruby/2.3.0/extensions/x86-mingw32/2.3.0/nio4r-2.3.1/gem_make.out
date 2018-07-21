@@ -1,5 +1,5 @@
 current directory: D:/Documents/RubyProjects/marketplace/gems/ruby/2.3.0/gems/nio4r-2.3.1/ext/nio4r
-C:/Categorized/Programming/Ruby23/bin/ruby.exe -r ./siteconf20180708-20700-1ilknqa.rb extconf.rb
+C:/ProgramsExcluded/Programming/RailsInstaller/Ruby2.3.3/bin/ruby.exe -r ./siteconf20180721-7228-njttt.rb extconf.rb
 
 current directory: D:/Documents/RubyProjects/marketplace/gems/ruby/2.3.0/gems/nio4r-2.3.1/ext/nio4r
 make "DESTDIR=" clean

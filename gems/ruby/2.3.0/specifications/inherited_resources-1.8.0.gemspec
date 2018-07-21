@@ -14,10 +14,10 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 2.2".freeze)
   s.rubyforge_project = "inherited_resources".freeze
-  s.rubygems_version = "2.7.7".freeze
+  s.rubygems_version = "2.5.2".freeze
   s.summary = "Inherited Resources speeds up development by making your controllers inherit all restful actions so you just have to focus on what is important.".freeze
 
-  s.installed_by_version = "2.7.7" if s.respond_to? :installed_by_version
+  s.installed_by_version = "2.5.2" if s.respond_to? :installed_by_version
 
   if s.respond_to? :specification_version then
     s.specification_version = 4

@@ -7,7 +7,7 @@
       <user-name>postgres</user-name>
     </data-source>
     <data-source name="Rails marketplace: test" uuid="03e4c4c5-c1ef-4ade-9ba4-98becccf2aed">
-      <database-info product="PostgreSQL" version="9.6.3" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.2">
+      <database-info product="PostgreSQL" version="10.4" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.2">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
@@ -15,7 +15,7 @@
       <introspection-schemas>marketplace_test:public</introspection-schemas>
     </data-source>
     <data-source name="Rails marketplace: development" uuid="e7b76a16-15ba-42bc-bc06-a55a56d929a7">
-      <database-info product="PostgreSQL" version="9.6.3" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.2">
+      <database-info product="PostgreSQL" version="10.4" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.2">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />

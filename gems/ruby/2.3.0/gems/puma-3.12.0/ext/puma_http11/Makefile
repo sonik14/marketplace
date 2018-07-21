@@ -12,12 +12,12 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /C/Categorized/Programming/RailsInstaller/RailsInstaller/Ruby2.3.3/include/ruby-2.3.0
+topdir = /C/ProgramsExcluded/Programming/RailsInstaller/Ruby2.3.3/include/ruby-2.3.0
 hdrdir = $(topdir)
-arch_hdrdir = C:/Categorized/Programming/RailsInstaller/RailsInstaller/Ruby2.3.3/include/ruby-2.3.0/i386-mingw32
+arch_hdrdir = C:/ProgramsExcluded/Programming/RailsInstaller/Ruby2.3.3/include/ruby-2.3.0/i386-mingw32
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = $(DESTDIR)/C/Categorized/Programming/RailsInstaller/RailsInstaller/Ruby2.3.3
+prefix = $(DESTDIR)/C/ProgramsExcluded/Programming/RailsInstaller/Ruby2.3.3
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -31,8 +31,8 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
-sitearchdir = $(DESTDIR)./.gem.20180716-24176-1s6zu04
-sitelibdir = $(DESTDIR)./.gem.20180716-24176-1s6zu04
+sitearchdir = $(DESTDIR)./.gem.20180721-7228-d4unsf
+sitelibdir = $(DESTDIR)./.gem.20180721-7228-d4unsf
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
