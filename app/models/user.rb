@@ -19,4 +19,11 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :encrypted_password, presence: true, length: { minimum: 6 }
   validates :sign_in_count, presence: true
+
+  before_save :add_user_name
+
+  private
+    def add_user_name
+      self.name =  self.email + ' <' + self.last_name + ' ' + self.first_name + '>'
+    end
 end
