@@ -4,7 +4,7 @@ class CreateFunctionUsages < ActiveRecord::Migration[5.0]
       t.belongs_to :version, foreign_key: true, null: false
 
       t.string :name, null: false
-      t.boolean :fixedPars, null: false, default: false # true when admin can modify parameters
+      t.boolean :fixedPars, null: false, default: false # false when admin can modify parameters
       t.boolean :differentEachCust, null: false, default: false # true when each customer follows different function
       t.boolean :differentEachQ, null: false, default: false # true when admin can change it each quarter
 

@@ -49,7 +49,9 @@ gem 'devise', '>= 4.4.2'
 gem 'cancancan'
 gem 'draper'
 gem 'pundit'
-gem 'activeadmin', '>= 1.2.1'
+gem 'activeadmin', '>= 1.3.1'
+gem 'activeadmin_dynamic_fields' # not used anymore
+gem 'async' # not used anymore
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

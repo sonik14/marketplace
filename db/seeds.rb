@@ -11,11 +11,11 @@ Role.create!(name: 'ceo') if Rails.env.development?
 Role.create!(name: 'user') if Rails.env.development?
 User.create!(role_id: '1', first_name: 'Test', last_name: 'Admin', email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 User.create!(role_id: '2', first_name: 'Test', last_name: 'Moderator', email: 'moderator@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
-User.create!(role_id: '4', first_name: 'Test', last_name: 'Ceo', email: 'ceo1@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
-User.create!(role_id: '4', first_name: 'Test', last_name: 'Ceo', email: 'ceo2@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+User.create!(role_id: '3', first_name: 'Test', last_name: 'Ceo', email: 'ceo1@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+User.create!(role_id: '3', first_name: 'Test', last_name: 'Ceo', email: 'ceo2@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 User.create!(role_id: '4', first_name: 'Test', last_name: 'User', email: 'user1@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 User.create!(role_id: '4', first_name: 'Test', last_name: 'User', email: 'user2@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
-Version.create!(mainNo: '1', name: '1.0.0', rangeDemandMin: '0.01', rangeDemandMax: '0.1', adv_lines_max: '10', funding_amount_default: '5000000', funding_amount_duration: '5', illPerRmin: '0.1', illPerRmax: '0.6') if Rails.env.development?
+Version.create!(mainNo: '1', name: '1.0.0', rangeDemandMin: '0.01', rangeDemandMax: '0.1', adv_lines_max: '10', funding_amount_default: '5000000', funding_amount_duration: '5', illPerRmin: '0.1', illPerRmax: '0.6', durationMin: '6', durationMax: '20', durationDef: '10') if Rails.env.development?
 
 Health.create!(version_id: '1', name: 'basic') if Rails.env.development?
 Health.create!(version_id: '1', name: 'full') if Rails.env.development?
@@ -147,49 +147,63 @@ City.all.each do |city|
 	Customer.all.each do |customer|
 		case customer.name
 		when 'Hardcore Power'
-		  	marketsizePer = hardMarket
+		  	marketsizeCustPer = hardMarket
 		when 'Work on-the-Go'
-		  	marketsizePer = onthegoMarket
+		  	marketsizeCustPer = onthegoMarket
 		when 'Sophisticated'
-		  	marketsizePer = sophMarket
+		  	marketsizeCustPer = sophMarket
 		when 'Professional'
-		  	marketsizePer = profMarket
+		  	marketsizeCustPer = profMarket
 		else
-		  	marketsizePer = casualMarket
+		  	marketsizeCustPer = casualMarket
 		end
+		marketsize = cityMarketsize*marketsizeCustPer
+		marketsizeTotPer = (marketsize/totalMarketsize).round(5)
+		marketsizeTotRmax = previousTot + marketsizeTotPer
 		CustCity.create!(
 			city_id: city.id,
 			customer_id: customer.id,
-			marketsize: cityMarketsize*marketsizePer,
-			marketsizePer: marketsizePer*100,
-	  		marketsizeRmin: previousCust,
-	   		marketsizeRmax: previousCust + marketsizePer,
+			marketsize: marketsize,
+			marketsizeCustPer: marketsizeCustPer*100,
+	   		marketsizeTotPer: marketsizeTotPer*100,
+	  		marketsizeCustRmin: previousCust,
+	   		marketsizeCustRmax: previousCust + marketsizeCustPer,
 	  		marketsizeTotRmin: previousTot,
-	   		marketsizeTotRmax: previousTot + ((cityMarketsize*marketsizePer)/totalMarketsize).round(4)
+	   		marketsizeTotRmax: marketsizeTotRmax
 		) if Rails.env.development?
-	  	previousCust = previousCust + marketsizePer
-	  	previousTot = previousTot + ((cityMarketsize*marketsizePer)/totalMarketsize).round(4)
+	  	previousCust = previousCust + marketsizeCustPer
+	  	previousTot = marketsizeTotRmax
 	end
 end
 
 FunctionUsage.create!(
 	version_id: '1',
-	name: 'demand',
-	differentEachQ: true
+	name: 'demand', # must exist with this exact name
+	differentEachQ: true # => 1 se kathe trimino
 ) if Rails.env.development?
 FunctionUsage.create!(
 	version_id: '1',
-	name: 'pricing',
-	differentEachCust: true
+	name: 'pricing', # must exist with this exact name
+	differentEachCust: true # => 5
+) if Rails.env.development?
+FunctionUsage.create!(
+	version_id: '1',
+	name: 'test for function_g'
+) if Rails.env.development?
+FunctionUsage.create!(
+	version_id: '1',
+	name: 'test for cust_q_func',
+	differentEachCust: true,
+	differentEachQ: true # => 5 se kathe trimino
 ) if Rails.env.development?
 
-demandValue = totalMarketsize.to_f/78*12
+demandValue = totalMarketsize.to_f/78*12 #1+2+3+4+5+6+7+8+9+10+11+12=78
 scale = (10 ** (Math.log10(demandValue).to_i - 1) )
 Function.create!(
 	version_id: '1',
 	function_usage_id: '1',
 	name: 'linear',
-	function: 'a*x+b',
+	function: 'd*(a*x+b)',
 	function_copy: 'a*x+b',
 	parAmin: '1',
 	parAmax: '10',
@@ -200,12 +214,12 @@ Function.create!(
 	parBmax: '50',
 	parBdef: '10',
 	parBname: 'offset (beggining demand [for month 0] divided by D (scale))',
-	parBscale: '0',
+	parBscale: '1',
 	parDmin: '10000',
 	parDmax: '1000000',
 	parDdef: scale,
 	parDname: 'scale',
-	parDscale: '0'
+	parDscale: '1'
 ) if Rails.env.development?
 Function.create!(
 	version_id: '1',
@@ -222,17 +236,17 @@ Function.create!(
 	parBmax: '60',
 	parBdef: '21',
 	parBname: 'month with half the maximum demand',
-	parBscale: '0',
+	parBscale: '1',
 	parCmin: '10',
 	parCmax: '100',
 	parCdef: (demandValue/scale).round(0),
-	parCname: 'maximum deseasonalised demand in a month divided by D (scale)',
-	parCscale: '0',
+	parCname: 'maximum deseasonalised demand of a month divided by D (scale) [asymptotic value]',
+	parCscale: '1',
 	parDmin: '10000',
 	parDmax: '1000000',
 	parDdef: scale,
 	parDname: 'scale',
-	parDscale: '0'
+	parDscale: '1'
 ) if Rails.env.development?
 Function.create!(
 	version_id: '1',
@@ -245,7 +259,7 @@ Function.create!(
 	parBmax: '5000',
 	parBdef: '900',
 	parBname: 'willing',
-	parBscale: '0',
+	parBscale: '1',
 	parCmin: '1.01',
 	parCmax: '4.00',
 	parCdef: '1.50',
@@ -262,12 +276,12 @@ Function.create!(
 	parAmax: '10',
 	parAdef: '8',
 	parAname: 'slope 10 pow',
-	parAscale: '0',
+	parAscale: '1',
 	parBmin: '250',
 	parBmax: '5000',
 	parBdef: '900',
 	parBname: 'willing',
-	parBscale: '0',
+	parBscale: '1',
 	parCmin: '1.01',
 	parCmax: '4.00',
 	parCdef: '1.50',
@@ -277,7 +291,36 @@ Function.create!(
 	parDmax: '10',
 	parDdef: '10',
 	parDname: 'influence pow base',
-	parDscale: '0'
+	parDscale: '1'
+) if Rails.env.development?
+Function.create!(
+	version_id: '1',
+	function_usage_id: '3',
+	name: 'test 1',
+	function: 'test 1'
+) if Rails.env.development?
+Function.create!(
+	version_id: '1',
+	function_usage_id: '4',
+	name: 'test 2',
+	function: 'test 2',
+	parAname: 'test A',
+	parAdef: '850',
+	parCname: 'test C',
+	parCdef: '2.00',
+) if Rails.env.development?
+
+CustFunc.create!(
+	function_id: '3',
+	customer_id: '2',
+	parBdef: '1600',
+	parCdef: '3.50'
+) if Rails.env.development?
+CustFunc.create!(
+	function_id: '6',
+	customer_id: '2',
+	parAdef: '100',
+	parCdef: '1.76'
 ) if Rails.env.development?
 =begin
 

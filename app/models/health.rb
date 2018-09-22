@@ -11,4 +11,5 @@ class Health < ApplicationRecord
 
   validates :version, presence: true
   validates :name, presence: true, uniqueness: true
+#  validates :default, uniqueness: true, if: :default
 end

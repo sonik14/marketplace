@@ -4,7 +4,7 @@ class CreateCompanies < ActiveRecord::Migration[5.0]
 
       t.belongs_to :game, foreign_key: true, null: false, index: true
       t.integer :ceo_id
-      t.belongs_to :continent, foreign_key: true #factory location
+      t.belongs_to :continent, foreign_key: true, default: nil #factory location
 
       t.string :name, unique: true, index: true #dont allow null in model though, null: false
       t.string :mission

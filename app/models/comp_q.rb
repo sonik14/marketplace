@@ -1,8 +1,8 @@
 class CompQ < ApplicationRecord
   belongs_to :quarter
   belongs_to :company
-  belongs_to :insurance_e, class_name: 'Health'
-  belongs_to :insurance_w, class_name: 'Health'
+  belongs_to :insurance_e, class_name: 'Health', optional: true
+  belongs_to :insurance_w, class_name: 'Health', optional: true
 
   has_many :comp_prod_chars
   has_many :comp_q_scores

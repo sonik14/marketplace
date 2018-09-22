@@ -23,3 +23,23 @@ input[disabled] {
   border: 0px solid #F4F4F4 !important;
 }
 */
+
+.floatRight {
+	float: right !important;
+}
+
+.paddingLeft {
+	padding-left: 10px;
+}
+
+.disabledField {
+	pointer-events: none;
+}
+
+.red {
+	color: red;
+}
+
+.block {
+	display: block;
+}
