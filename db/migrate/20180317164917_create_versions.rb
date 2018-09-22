@@ -11,6 +11,9 @@ class CreateVersions < ActiveRecord::Migration[5.0]
       t.integer  :funding_amount_duration, unsigned: true, limit: 1, default: 5
       t.decimal  :illPerRmin, unsigned: true, precision: 3, scale: 2
       t.decimal  :illPerRmax, unsigned: true, precision: 3, scale: 2
+      t.integer  :durationMin, unsigned: true, limit: 1
+      t.integer  :durationMax, unsigned: true, limit: 1
+      t.integer  :durationDef, unsigned: true, limit: 1
       t.timestamps
     end
   end

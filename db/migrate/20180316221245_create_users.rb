@@ -9,6 +9,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :first_name, null: false
       t.string :middle_name
       t.string :last_name, index: true, null: false
+      t.string :name
 
       t.timestamps
     end

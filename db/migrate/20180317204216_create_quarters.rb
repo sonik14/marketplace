@@ -4,8 +4,9 @@ class CreateQuarters < ActiveRecord::Migration[5.0]
 
       t.belongs_to :game, foreign_key: true, null: false
       t.integer :q_no, null: false, index: true
+      t.string :name
 
-      t.decimal :rangeDemandPer, unsigned: true, precision: 3, scale: 2
+      t.decimal :rangeDemandPer, unsigned: true, precision: 2, scale: 0
       
       t.integer :fundingAmountMax, unsigned: true
       t.timestamps
