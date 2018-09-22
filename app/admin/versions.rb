@@ -3,16 +3,17 @@ ActiveAdmin.register Version, namespace: :data do
   before_filter :ensure_moderator!
   form do |f|
     f.inputs do
+      # sequential increment of version number
    	  f.input :mainNo, less_than_or_equal_to: (Version.maximum("mainNo")+1)
 =begin
       {
         :as => :range, #bar not suggested for accuracy, #last, #find
-        :in => 1..(params[:id].to_i+1),
+        :in => 1..(params[:id].to_i+1),  # Only integers inside in
         :step => 1
       }
 =end
-      f.input :name, {input_html: {disabled: params[:id] ? true : false}}
-      f.input :illPerRmin, in: 0..1, step: 0.01 # Only integers inside in
+      f.input :name #, {input_html: {disabled: params[:id] ? true : false}}
+      f.input :illPerRmin
     end
     f.actions
   end
