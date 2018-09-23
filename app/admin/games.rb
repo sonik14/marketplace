@@ -178,6 +178,6 @@ ActiveAdmin.register Game do
 	show do
 		default_main_content
 		q = Quarter.where(game_id: params[:id]).order(q_no: :desc).take
-		strong (button_to "Add CEOs", '/admin/companies#new') if q.nil?
+		strong (button_to "Add CEOs", new_admin_company_path, method: :get) if q.nil?
 	end
 end
