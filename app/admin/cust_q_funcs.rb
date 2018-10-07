@@ -52,13 +52,13 @@ ActiveAdmin.register CustQFunc do
       f.label "Different Parameter Ranges and Defaults for this type Of Customer.", class: 'paddingLeft red block' unless cust_q_func.cust_func_id.nil?
       f.label "Parameters should have up to 2 decimal points!", class: 'paddingLeft red block' unless function_id.nil?
       f.input :parA, label: "Par A: #{function.parAname} (Range: #{cust_func.parAmin}-#{cust_func.parAmax}) [Scale: #{function.parAscale}]", 
-               min: cust_func.parAmin, max: cust_func.parAmax, step: 0.01, value: cust_func.parAdef, input_html: {disabled: q_max > 1 ? true : false} unless function_id.nil? || cust_func.parAdef.nil?
+               min: cust_func.parAmin, max: cust_func.parAmax, step: 0.01, value: cust_func.parAdef, input_html: {disabled: q_max > q.q_no ? true : false} unless function_id.nil? || cust_func.parAdef.nil?
       f.input :parB, label: "Par B: #{function.parBname} (Range: #{cust_func.parBmin}-#{cust_func.parBmax}) [Scale: #{function.parBscale}]", 
-               min: cust_func.parBmin, max: cust_func.parBmax, step: 0.01, value: cust_func.parBdef, input_html: {disabled: q_max > 1 ? true : false} unless function_id.nil? || cust_func.parBdef.nil?
+               min: cust_func.parBmin, max: cust_func.parBmax, step: 0.01, value: cust_func.parBdef, input_html: {disabled: q_max > q.q_no ? true : false} unless function_id.nil? || cust_func.parBdef.nil?
       f.input :parC, label: "Par C: #{function.parCname} (Range: #{cust_func.parCmin}-#{cust_func.parCmax}) [Scale: #{function.parCscale}]", 
-               min: cust_func.parCmin, max: cust_func.parCmax, step: 0.01, value: cust_func.parCdef, input_html: {disabled: q_max > 1 ? true : false} unless function_id.nil? || cust_func.parCdef.nil?
+               min: cust_func.parCmin, max: cust_func.parCmax, step: 0.01, value: cust_func.parCdef, input_html: {disabled: q_max > q.q_no ? true : false} unless function_id.nil? || cust_func.parCdef.nil?
       f.input :parD, label: "Par D: #{function.parDname} (Range: #{cust_func.parDmin}-#{cust_func.parDmax}) [Scale: #{function.parDscale}]", 
-               min: cust_func.parDmin, max: cust_func.parDmax, step: 0.01, value: cust_func.parDdef, input_html: {disabled: q_max > 1 ? true : false} unless function_id.nil? || cust_func.parDdef.nil?
+               min: cust_func.parDmin, max: cust_func.parDmax, step: 0.01, value: cust_func.parDdef, input_html: {disabled: q_max > q.q_no ? true : false} unless function_id.nil? || cust_func.parDdef.nil?
     end
 	  f.actions do
       if function_id.nil?
