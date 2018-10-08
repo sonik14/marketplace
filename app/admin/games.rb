@@ -68,18 +68,39 @@ ActiveAdmin.register Game do
 			demandFunc = FunctionQ.where(quarter_id: q.id, function_usage_id: usage_id).take
 			if demandFunc.function_id.nil? # choose a random function for demand if not selected (parameters will be auto assigned)
 				demandFunc.update_attributes(
-					function_id: Function.where(version_id: game.version_id, function_usage_id: usage_id).take.id
+					function_id: Function.where(function_usage_id: usage_id).take.id
 				)
 				demandFunc = FunctionQ.find(demandFunc.id)
 			end
 			parentFunc = Function.find(demandFunc.function_id)
-			a = demandFunc.parA * parentFunc.parAscale unless demandFunc.parA.nil?
-			b = demandFunc.parB * parentFunc.parBscale unless demandFunc.parB.nil?
-			c = demandFunc.parC * parentFunc.parCscale unless demandFunc.parC.nil?
-			d = demandFunc.parD * parentFunc.parDscale unless demandFunc.parD.nil?
+			a = demandFunc.parA
+			b = demandFunc.parB
+			c = demandFunc.parC
+			d = demandFunc.parD
 			fist_month = Month.find(game.first_month_id).no
 			offset = 3 * (q.q_no - 1)
 			current_month = offset + fist_month - 1 # - 1, cause number starts from 1
+# ----------- Example for Products
+			productIds = [] # assign product id here
+			custIds = [] # assign customer id here
+			counter = 0
+			Customer.all.each do |cust|
+				custIds[cust.id] = counter
+				counter = counter + 1
+			end
+			products = [] # Retrieve it from database when there is client side developed
+			products[0] = [84, 75, 1, 15, 18] # examples for testing
+			products[1] = [83, 76, 1, 25, 33]
+			products[2] = [24, 37, 71, 56, 55]
+			products[3] = [2, 17, 76, 67, 49]
+			productsNo = 3
+			sortedPr = []
+			sortedPr[0] = [0, 1, 2, 3]
+			sortedPr[1] = [1, 0, 2, 3]
+			sortedPr[2] = [3, 2, 0, 1]
+			sortedPr[3] = [3, 2, 1, 0]
+			sortedPr[4] = [2, 3, 1, 0]
+# -----------
 			for i in 0..2
 				m = (current_month + i) % 12 + 1 # + 1, cause number starts from 1
 				month = Month.where(no: m).take
@@ -96,9 +117,11 @@ ActiveAdmin.register Game do
 					demandS: demandS
 				)
 				marketsizeArr = []
-				custCityMap = []
 				demandPArr = []
 				demandSArr = []
+				demandSProdArr = []
+				buySProdArr = []
+				custMap = []
 				marketsizeMin = 0
 				marketsizeMax = 0 # keep max to define loop times
 				scale = 5 # taken from CreateCustCities
@@ -110,13 +133,58 @@ ActiveAdmin.register Game do
 					demandPArr[custcity.id] = ((custcity.marketsizeTotPer*demandP)/100).round(0) # predicted demand (exists for visual comparison with simulation)
 					marketsizeMin = (custcity.marketsizeTotRmin*integer).round(0).to_i
 					marketsizeMax = (custcity.marketsizeTotRmax*integer).round(0).to_i
-					for k in marketsizeMin..marketsizeMax
+					if marketsizeMin == marketsizeMax
+						marketsizeMax = marketsizeMax + 1
+					end
+					for k in marketsizeMin...marketsizeMax
 						marketsizeArr[k] = custcity.id
+						custMap[k] = custcity.customer_id
 					end
 				end
 				for j in 1..demandS
-					marketsize = rand(0..marketsizeMax)
+					marketsize = rand(0...marketsizeMax)
 					demandSArr[marketsizeArr[marketsize]] = demandSArr[marketsizeArr[marketsize]].to_i + 1
+# ----------- Example for Products
+					cust_no = custIds[custMap[marketsize]]
+					if cust_no == 0
+						productScores = {'0': 84, '1': 83, '2': 24, '3': 2}
+					elsif cust_no == 1
+						productScores = {'0': 75, '1': 76, '2': 37, '3': 17}
+					elsif cust_no == 2
+						productScores = {'0': 1, '1': 1, '2': 71, '3': 76}
+					elsif cust_no == 3
+						productScores = {'0': 15, '1': 25, '2': 56, '3': 67}
+					else
+						productScores = {'0': 18, '1': 33, '2': 55, '3': 49}
+					end
+					productScores.stringify_keys!()
+					for l in 0..productsNo
+						selectProd = rand(0..100)
+#						pr_no = sortedPr[cust_no][l]
+						pr_no = -1
+
+						sum = productScores.inject(0) do |sum, item_and_weight|
+							sum += item_and_weight[1]
+						end
+						target = rand(sum)
+						productScores.each do |item, weight|
+							if target <= weight
+								pr_no = item.to_i
+								break
+							end
+							target -= weight
+      					end
+
+						score = products[pr_no][cust_no]
+						demandSProdArr[pr_no] = demandSProdArr[pr_no].to_i + 1
+						if selectProd <= score
+							buySProdArr[pr_no] = buySProdArr[pr_no].to_i + 1
+							break
+						else
+							productScores.except!(pr_no.to_s)
+						end
+					end
+# -----------
 				end
 				demandSArr.each_with_index do |demandS, cust_city_id|
 					CustGMqCity.create!(
@@ -126,6 +194,7 @@ ActiveAdmin.register Game do
 						demandP: demandPArr[cust_city_id]
 					) unless cust_city_id==0
 				end
+#puts buySProdArr
 			end
 	  		q_no = q.q_no + 1 # proceed to next quarter
   		end
