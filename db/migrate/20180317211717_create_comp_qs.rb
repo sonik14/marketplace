@@ -5,7 +5,7 @@ class CreateCompQs < ActiveRecord::Migration[5.0]
       t.belongs_to :company, foreign_key: true, null: false
       t.belongs_to :quarter, foreign_key: true, null: false
 
-      t.decimal :fundingPer, unsigned: true, precision: 5, scale: 2, default: 100.00
+      t.integer :fundingPer, unsigned: true, limit: 1, default: 100
       # funding percent of funding max of table quarter chosen by admin
 
       t.integer :cash, unsigned: true

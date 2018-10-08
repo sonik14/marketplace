@@ -5,8 +5,8 @@ class CreateCustCategoryProds < ActiveRecord::Migration[5.0]
       t.belongs_to :category_prod, foreign_key: true, null: false
       t.belongs_to :customer, foreign_key: true, null: false
 
-      t.integer :CharsWantedNo, unsigned: true # less than M of course and if multiple is true
-      t.decimal :CharsWantedNoS, unsigned: true, precision: 3, scale: 2
+      t.integer :charsWantedNo, unsigned: true # less than M of course and if multiple is true
+      t.decimal :charsWantedNoSΙ, unsigned: true, precision: 3, scale: 2
       # how sensitive the user is if less or more characteristics of this category exist in a product
       t.boolean :acceptBetter, null: false, default: :true
       # if comparable is true =>

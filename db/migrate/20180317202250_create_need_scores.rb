@@ -10,5 +10,6 @@ class CreateNeedScores < ActiveRecord::Migration[5.0]
       # can also be negative influence if a prod_char exists
       t.timestamps
     end
+    add_index :need_scores, [:need_id, :score_id], unique: true
   end
 end

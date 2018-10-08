@@ -16,6 +16,7 @@ class CreateGames < ActiveRecord::Migration[5.0]
       t.boolean :finished, default: false
       t.timestamps
     end
-    add_foreign_key :games, :months, column: :first_month_id
+    add_foreign_key :games, :months, column: :first_month_id, null: false
+    add_index :games, [:version_id, :name], unique: true
   end
 end

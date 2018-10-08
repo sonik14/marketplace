@@ -9,7 +9,7 @@ class CreateContinents < ActiveRecord::Migration[5.0]
       t.decimal :salaryWI, unsigned: true, precision: 3, scale: 2
       t.integer :salaryWC, unsigned: true
       t.decimal :healthWI, unsigned: true, precision: 3, scale: 2
-      t.integer :health_w_id #sto health gia ton proepilegmeno typo. to health_cont perilamvanei to kostos kathe health gia kathe hpeiro
+      t.integer :health_w_id, null: false #sto health gia ton proepilegmeno typo. to health_cont perilamvanei to kostos kathe health gia kathe hpeiro
       t.decimal :vacationWI, unsigned: true, precision: 3, scale: 2
       t.integer :vacationWW, unsigned: true, limit: 1 #weeks
       t.integer :vacationWC, unsigned: true
@@ -21,7 +21,7 @@ class CreateContinents < ActiveRecord::Migration[5.0]
       t.decimal :salaryEI, unsigned: true, precision: 3, scale: 2
       t.integer :salaryED, unsigned: true
       t.decimal :healthEI, unsigned: true, precision: 3, scale: 2
-      t.integer :health_e_id
+      t.integer :health_e_id, null: false
       t.decimal :vacationEI, unsigned: true, precision: 3, scale: 2
       t.integer :vacationDI, unsigned: true, limit: 1 #weeks
       t.decimal :pensionEI, unsigned: true, precision: 3, scale: 2

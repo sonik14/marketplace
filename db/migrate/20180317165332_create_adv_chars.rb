@@ -4,7 +4,7 @@ class CreateAdvChars < ActiveRecord::Migration[5.0]
 
       t.belongs_to :category_adv, foreign_key: true, null: false, index: true
 
-      t.string :name, unique: true, index: true, null: false
+      t.string :name, index: true, null: false
       t.integer :avail, unsigned: true, limit: 1, index: true, null: false, default: 1
 
       t.integer :scale #1to.. (too bad or absent, bad, mediocre, good, very good)
@@ -23,6 +23,7 @@ class CreateAdvChars < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
+    add_index :adv_chars, [:category_adv_id, :name], unique: true
     add_index :adv_chars, [:category_adv_id, :scale], unique: true
   end
 end

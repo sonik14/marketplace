@@ -9,9 +9,8 @@ class CreateFunctionGs < ActiveRecord::Migration[5.0]
       t.float :parB
       t.float :parC
       t.float :parD
-      
       t.timestamps
     end
-    add_index :function_gs, [:function_id, :game_id], unique: true
+    add_index :function_gs, [:function_usage_id, :game_id], unique: true
   end
 end

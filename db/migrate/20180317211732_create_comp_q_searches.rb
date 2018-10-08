@@ -4,6 +4,7 @@ class CreateCompQSearches < ActiveRecord::Migration[5.0]
 
       t.belongs_to :comp_q, foreign_key: true, null: false
       t.belongs_to :continent, foreign_key: true, null: false
+
       t.boolean :avail, unsigned: true
       t.timestamps
     end
