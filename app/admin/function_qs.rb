@@ -47,13 +47,13 @@ ActiveAdmin.register FunctionQ do
 			         input_html: {disabled: !function_id.nil? || q_max > q.q_no ? true : false}, include_blank: false
       f.label "Parameters should have up to 2 decimal points!", class: 'paddingLeft red' unless function_id.nil?
       f.input :parA, label: "Par A: #{function.parAname} (Range: #{function.parAmin}-#{function.parAmax}) [Round to: #{function.parAscale} Decimal Points]", 
-               min: function.parAmin, max:function.parAmax, step: 1.0/(10**function.parAscale), value: function.parAdef, input_html: {disabled: q_max > q.q_no ? true : false} unless function_id.nil? || function.parAdef.nil?
+               min: function.parAmin, max:function.parAmax, step: 1.0/(10**function.parAscale), input_html: {disabled: q_max > q.q_no ? true : false} unless function_id.nil? || function.parAdef.nil?
       f.input :parB, label: "Par B: #{function.parBname} (Range: #{function.parBmin}-#{function.parBmax}) [Round to: #{function.parBscale} Decimal Points]", 
-               min: function.parBmin, max:function.parBmax, step: 1.0/(10**function.parBscale), value: function.parBdef, input_html: {disabled: q_max > q.q_no ? true : false} unless function_id.nil? || function.parBdef.nil?
+               min: function.parBmin, max:function.parBmax, step: 1.0/(10**function.parBscale), input_html: {disabled: q_max > q.q_no ? true : false} unless function_id.nil? || function.parBdef.nil?
       f.input :parC, label: "Par C: #{function.parCname} (Range: #{function.parCmin}-#{function.parCmax}) [Round to: #{function.parCscale} Decimal Points]", 
-               min: function.parCmin, max:function.parCmax, step: 1.0/(10**function.parCscale), value: function.parCdef, input_html: {disabled: q_max > q.q_no ? true : false} unless function_id.nil? || function.parCdef.nil?
+               min: function.parCmin, max:function.parCmax, step: 1.0/(10**function.parCscale), input_html: {disabled: q_max > q.q_no ? true : false} unless function_id.nil? || function.parCdef.nil?
       f.input :parD, label: "Par D: #{function.parDname} (Range: #{function.parDmin}-#{function.parDmax}) [Round to: #{function.parDscale} Decimal Points]", 
-               min: function.parDmin, max:function.parDmax, step: 1.0/(10**function.parDscale), value: function.parDdef, input_html: {disabled: q_max > q.q_no ? true : false} unless function_id.nil? || function.parDdef.nil?
+               min: function.parDmin, max:function.parDmax, step: 1.0/(10**function.parDscale), input_html: {disabled: q_max > q.q_no ? true : false} unless function_id.nil? || function.parDdef.nil?
     end
 	  f.actions do
       if function_id.nil?

@@ -51,13 +51,13 @@ ActiveAdmin.register CustGFunc do
       f.label "Different Parameter Ranges and Defaults for this type Of Customer.", class: 'paddingLeft red block' unless cust_g_func.cust_func_id.nil?
       f.label "Parameters should have up to 2 decimal points!", class: 'paddingLeft red block' unless function_id.nil?
       f.input :parA, label: "Par A: #{function.parAname} (Range: #{cust_func.parAmin}-#{cust_func.parAmax}) [Round to: #{function.parAscale} Decimal Points]", 
-      		     min: cust_func.parAmin, max: cust_func.parAmax, step: 1.0/(10**function.parAscale), value: cust_func.parAdef, input_html: {disabled: q_max > 1 ? true : false} unless function_id.nil? || cust_func.parAdef.nil?
+      		     min: cust_func.parAmin, max: cust_func.parAmax, step: 1.0/(10**function.parAscale), input_html: {disabled: q_max > 1 ? true : false} unless function_id.nil? || cust_func.parAdef.nil?
       f.input :parB, label: "Par B: #{function.parBname} (Range: #{cust_func.parBmin}-#{cust_func.parBmax}) [Round to: #{function.parBscale} Decimal Points]", 
-      		     min: cust_func.parBmin, max: cust_func.parBmax, step: 1.0/(10**function.parBscale), value: cust_func.parBdef, input_html: {disabled: q_max > 1 ? true : false} unless function_id.nil? || cust_func.parBdef.nil?
+      		     min: cust_func.parBmin, max: cust_func.parBmax, step: 1.0/(10**function.parBscale), input_html: {disabled: q_max > 1 ? true : false} unless function_id.nil? || cust_func.parBdef.nil?
       f.input :parC, label: "Par C: #{function.parCname} (Range: #{cust_func.parCmin}-#{cust_func.parCmax}) [Round to: #{function.parCscale} Decimal Points]", 
-      		     min: cust_func.parCmin, max: cust_func.parCmax, step: 1.0/(10**function.parCscale), value: cust_func.parCdef, input_html: {disabled: q_max > 1 ? true : false} unless function_id.nil? || cust_func.parCdef.nil?
+      		     min: cust_func.parCmin, max: cust_func.parCmax, step: 1.0/(10**function.parCscale), input_html: {disabled: q_max > 1 ? true : false} unless function_id.nil? || cust_func.parCdef.nil?
       f.input :parD, label: "Par D: #{function.parDname} (Range: #{cust_func.parDmin}-#{cust_func.parDmax}) [Round to: #{function.parDscale} Decimal Points]", 
-      		     min: cust_func.parDmin, max: cust_func.parDmax, step: 1.0/(10**function.parDscale), value: cust_func.parDdef, input_html: {disabled: q_max > 1 ? true : false} unless function_id.nil? || cust_func.parDdef.nil?
+      		     min: cust_func.parDmin, max: cust_func.parDmax, step: 1.0/(10**function.parDscale), input_html: {disabled: q_max > 1 ? true : false} unless function_id.nil? || cust_func.parDdef.nil?
     end
 	  f.actions do
       if function_id.nil?
