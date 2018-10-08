@@ -15,13 +15,13 @@ User.create!(role_id: '3', first_name: 'Test', last_name: 'Ceo', email: 'ceo1@ex
 User.create!(role_id: '3', first_name: 'Test', last_name: 'Ceo', email: 'ceo2@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 User.create!(role_id: '4', first_name: 'Test', last_name: 'User', email: 'user1@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 User.create!(role_id: '4', first_name: 'Test', last_name: 'User', email: 'user2@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
-Version.create!(mainNo: '1', name: '1.0.0', rangeDemandMin: '0.01', rangeDemandMax: '0.1', adv_lines_max: '10', funding_amount_default: '5000000', funding_amount_duration: '5', illPerRmin: '0.1', illPerRmax: '0.6', durationMin: '6', durationMax: '20', durationDef: '10') if Rails.env.development?
+Version.create!(mainNo: '1', name: '1.0.0', rangeDemandMin: '0.01', rangeDemandMax: '0.1', adv_lines_max: '10', funding_amount_default: '5000000', funding_amount_duration: '5', illPerRmin: '0.15', illPerRmax: '0.50', durationMin: '6', durationMax: '20', durationDef: '10') if Rails.env.development?
 
 Health.create!(version_id: '1', name: 'basic') if Rails.env.development?
 Health.create!(version_id: '1', name: 'full') if Rails.env.development?
-Continent.create!(version_id: '1', name: 'America', factoryCityName: 'Ensenada') if Rails.env.development?
-Continent.create!(version_id: '1', name: 'Europe-Africa EA', factoryCityName: 'Kiev') if Rails.env.development?
-Continent.create!(version_id: '1', name: 'Asia-Pacific APAC', factoryCityName: 'Shanghai') if Rails.env.development?
+Continent.create!(version_id: '1', name: 'America', factoryCityName: 'Ensenada', health_w_id: '1', health_e_id: '1') if Rails.env.development?
+Continent.create!(version_id: '1', name: 'Europe-Africa EA', factoryCityName: 'Kiev', health_w_id: '1', health_e_id: '1') if Rails.env.development?
+Continent.create!(version_id: '1', name: 'Asia-Pacific APAC', factoryCityName: 'Shanghai', health_w_id: '1', health_e_id: '1') if Rails.env.development?
 
 City.create!(continent_id: '1', name: 'New York', 		population: '8491079',  marketsize: '5863261') if Rails.env.development?
 City.create!(continent_id: '1', name: 'Chicago', 		population: '2695598',  marketsize: '1861359') if Rails.env.development?
@@ -64,7 +64,15 @@ Customer.create!(
 	rebuyRmin: '0.1',
 	rebuyRmax: '0.4',
 	rebuyIntervalmin: '3',
-	rebuyIntervalmax: ''
+	rebuyIntervalmax: Float::INFINITY,
+	A1_prod_char_SI_min: '0.15',
+	A1_prod_char_SI_max: '0.2',
+	A2_adv_char_SI_min: '0.2',
+	A2_adv_char_SI_max: '0.25',
+	A3_price_SI_min: '0.4',
+	A3_price_SI_max: '0.5',
+	A4_quality_SI_min: '0.05',
+	A4_quality_SI_max: '0.1'
 ) if Rails.env.development?
 Customer.create!(
 	version_id: '1',
@@ -78,7 +86,15 @@ Customer.create!(
 	rebuyRmin: '0.1',
 	rebuyRmax: '0.3',
 	rebuyIntervalmin: '3',
-	rebuyIntervalmax: ''
+	rebuyIntervalmax: Float::INFINITY,
+	A1_prod_char_SI_min: '0.25',
+	A1_prod_char_SI_max: '0.3',
+	A2_adv_char_SI_min: '0.15',
+	A2_adv_char_SI_max: '0.2',
+	A3_price_SI_min: '0.2',
+	A3_price_SI_max: '0.25',
+	A4_quality_SI_min: '0.25',
+	A4_quality_SI_max: '0.3' 
 ) if Rails.env.development?
 Customer.create!(
 	version_id: '1',
@@ -92,7 +108,15 @@ Customer.create!(
 	rebuyRmin: '0.1',
 	rebuyRmax: '0.3',
 	rebuyIntervalmin: '3',
-	rebuyIntervalmax: ''
+	rebuyIntervalmax: Float::INFINITY,
+	A1_prod_char_SI_min: '0.35',
+	A1_prod_char_SI_max: '0.4',
+	A2_adv_char_SI_min: '0.2',
+	A2_adv_char_SI_max: '0.25',
+	A3_price_SI_min: '0.1',
+	A3_price_SI_max: '0.15',
+	A4_quality_SI_min: '0.2',
+	A4_quality_SI_max: '0.25' 
 ) if Rails.env.development?
 Customer.create!(
 	version_id: '1',
@@ -106,7 +130,15 @@ Customer.create!(
 	rebuyRmin: '0.6',
 	rebuyRmax: '0.85',
 	rebuyIntervalmin: '3',
-	rebuyIntervalmax: '12'
+	rebuyIntervalmax: '12',
+	A1_prod_char_SI_min: '0.15',
+	A1_prod_char_SI_max: '0.19',
+	A2_adv_char_SI_min: '0.35',
+	A2_adv_char_SI_max: '0.40',
+	A3_price_SI_min: '0.01',
+	A3_price_SI_max: '0.05',
+	A4_quality_SI_min: '0.35',
+	A4_quality_SI_max: '0.4' 
 ) if Rails.env.development?
 Customer.create!(
 	version_id: '1',
@@ -120,7 +152,15 @@ Customer.create!(
 	rebuyRmin: '0.4',
 	rebuyRmax: '0.85',
 	rebuyIntervalmin: '2',
-	rebuyIntervalmax: '8'
+	rebuyIntervalmax: '8',
+	A1_prod_char_SI_min: '0.4',
+	A1_prod_char_SI_max: '0.51',
+	A2_adv_char_SI_min: '0.03',
+	A2_adv_char_SI_max: '0.05',
+	A3_price_SI_min: '0.05',
+	A3_price_SI_max: '0.1',
+	A4_quality_SI_min: '0.35',
+	A4_quality_SI_max: '0.45' 
 ) if Rails.env.development?
 #Casual User (transactional), Professional (application oriented), Hardcore Power/PC Master Race (only desktop), Sophisticated(relational) (the most elegant and technologically advanced. Apple lover), Work-on-the-go (only laptop)
 
@@ -200,7 +240,6 @@ FunctionUsage.create!(
 demandValue = totalMarketsize.to_f/78*12 #1+2+3+4+5+6+7+8+9+10+11+12=78
 scale = (10 ** (Math.log10(demandValue).to_i - 1) )
 Function.create!(
-	version_id: '1',
 	function_usage_id: '1',
 	name: 'linear',
 	function: 'd*(a*x+b)',
@@ -209,20 +248,19 @@ Function.create!(
 	parAmax: '10',
 	parAdef: '2.5',
 	parAname: 'slope',
-	parAscale: '2',
+	parAscale: '1',
 	parBmin: '0',
 	parBmax: '50',
 	parBdef: '10',
 	parBname: 'offset (beggining demand [for month 0] divided by D (scale))',
-	parBscale: '1',
+	parBscale: '0',
 	parDmin: '10000',
 	parDmax: '1000000',
 	parDdef: scale,
 	parDname: 'scale',
-	parDscale: '1'
+	parDscale: '0'
 ) if Rails.env.development?
 Function.create!(
-	version_id: '1',
 	function_usage_id: '1',
 	name: 'sigmoid',
 	function: 'd*(c/(1+Math.exp(-a*(x-b) ) ) )',
@@ -236,20 +274,19 @@ Function.create!(
 	parBmax: '60',
 	parBdef: '21',
 	parBname: 'month with half the maximum demand',
-	parBscale: '1',
+	parBscale: '0',
 	parCmin: '10',
 	parCmax: '100',
 	parCdef: (demandValue/scale).round(0),
 	parCname: 'maximum deseasonalised demand of a month divided by D (scale) [asymptotic value]',
-	parCscale: '1',
+	parCscale: '0',
 	parDmin: '10000',
 	parDmax: '1000000',
 	parDdef: scale,
 	parDname: 'scale',
-	parDscale: '1'
+	parDscale: '0'
 ) if Rails.env.development?
 Function.create!(
-	version_id: '1',
 	function_usage_id: '2',
 	name: 'linear',
 	function: '1 - ( (x-b)/((c-1)*b) )',
@@ -259,7 +296,7 @@ Function.create!(
 	parBmax: '5000',
 	parBdef: '900',
 	parBname: 'willing',
-	parBscale: '1',
+	parBscale: '0',
 	parCmin: '1.01',
 	parCmax: '4.00',
 	parCdef: '1.50',
@@ -267,11 +304,10 @@ Function.create!(
 	parCscale: '2'
 ) if Rails.env.development?
 Function.create!(
-	version_id: '1',
 	function_usage_id: '2',
 	name: 'asymptotic',
 	function: '(10*(d ** a))/(10*x - b*(5*(c+1) + (c-1)*Math.sqrt((25*b + (d ** a)/(c-1))/b) ) ) + (10*(5 + Math.sqrt((25*b + (d ** a)/(c-1))/b) ) )',
-	function_copy: '(10*(d^a))/(10*x - b*(5*(c+1) + (c-1)*sqrt{(25*b + (d^a)/(c-1))/b} ) ) + (10*(5 + sqrt{(25*b + (d^a)/(c-1))/b} ) )',
+	function_copy: '(10*(d^a))/(10*x - b*(5*(c+1) + (c-1)*\sqrt{(25*b + (d^a)/(c-1))/b} ) ) + (10*(5 + \sqrt{(25*b + (d^a)/(c-1))/b} ) )',
 	parAmin: '0',
 	parAmax: '10',
 	parAdef: '8',
@@ -281,7 +317,7 @@ Function.create!(
 	parBmax: '5000',
 	parBdef: '900',
 	parBname: 'willing',
-	parBscale: '1',
+	parBscale: '0',
 	parCmin: '1.01',
 	parCmax: '4.00',
 	parCdef: '1.50',
@@ -291,16 +327,14 @@ Function.create!(
 	parDmax: '10',
 	parDdef: '10',
 	parDname: 'influence pow base',
-	parDscale: '1'
+	parDscale: '0'
 ) if Rails.env.development?
 Function.create!(
-	version_id: '1',
 	function_usage_id: '3',
 	name: 'test 1',
 	function: 'test 1'
 ) if Rails.env.development?
 Function.create!(
-	version_id: '1',
 	function_usage_id: '4',
 	name: 'test 2',
 	function: 'test 2',

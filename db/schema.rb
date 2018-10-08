@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180520192739) do
+ActiveRecord::Schema.define(version: 20181006165001) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.datetime "created_at",                               null: false
     t.datetime "updated_at",                               null: false
     t.index ["avail"], name: "index_adv_chars_on_avail", using: :btree
+    t.index ["category_adv_id", "name"], name: "index_adv_chars_on_category_adv_id_and_name", unique: true, using: :btree
     t.index ["category_adv_id", "scale"], name: "index_adv_chars_on_category_adv_id_and_scale", unique: true, using: :btree
     t.index ["category_adv_id"], name: "index_adv_chars_on_category_adv_id", using: :btree
     t.index ["function_id"], name: "index_adv_chars_on_function_id", using: :btree
@@ -54,6 +55,7 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_adv_media_on_name", using: :btree
+    t.index ["version_id", "name"], name: "index_adv_media_on_version_id_and_name", unique: true, using: :btree
     t.index ["version_id"], name: "index_adv_media_on_version_id", using: :btree
   end
 
@@ -66,6 +68,7 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
     t.index ["name"], name: "index_category_advs_on_name", using: :btree
+    t.index ["version_id", "name"], name: "index_category_advs_on_version_id_and_name", unique: true, using: :btree
     t.index ["version_id"], name: "index_category_advs_on_version_id", using: :btree
   end
 
@@ -79,32 +82,28 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
     t.index ["name"], name: "index_category_prods_on_name", using: :btree
+    t.index ["version_id", "name"], name: "index_category_prods_on_version_id_and_name", unique: true, using: :btree
     t.index ["version_id"], name: "index_category_prods_on_version_id", using: :btree
   end
 
   create_table "chat_gs", force: :cascade do |t|
     t.integer  "game_id",    null: false
+    t.integer  "name1_id",   null: false
+    t.integer  "name2_id",   null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["game_id", "name1_id", "name2_id"], name: "index_chat_gs_on_game_id_and_name1_id_and_name2_id", unique: true, using: :btree
     t.index ["game_id"], name: "index_chat_gs_on_game_id", using: :btree
   end
 
   create_table "chat_lines", force: :cascade do |t|
     t.integer  "chat_g_id",  null: false
+    t.integer  "user_id",    null: false
     t.text     "text",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["chat_g_id"], name: "index_chat_lines_on_chat_g_id", using: :btree
-  end
-
-  create_table "chat_users", force: :cascade do |t|
-    t.integer  "chat_g_id",  null: false
-    t.integer  "user_id",    null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["chat_g_id", "user_id"], name: "index_chat_users_on_chat_g_id_and_user_id", unique: true, using: :btree
-    t.index ["chat_g_id"], name: "index_chat_users_on_chat_g_id", using: :btree
-    t.index ["user_id"], name: "index_chat_users_on_user_id", using: :btree
+    t.index ["user_id"], name: "index_chat_lines_on_user_id", using: :btree
   end
 
   create_table "cities", force: :cascade do |t|
@@ -118,6 +117,7 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.integer  "advC"
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
+    t.index ["continent_id", "name"], name: "index_cities_on_continent_id_and_name", unique: true, using: :btree
     t.index ["continent_id"], name: "index_cities_on_continent_id", using: :btree
     t.index ["name"], name: "index_cities_on_name", using: :btree
   end
@@ -180,11 +180,11 @@ ActiveRecord::Schema.define(version: 20180520192739) do
   end
 
   create_table "comp_goals", force: :cascade do |t|
-    t.integer  "company_id"
-    t.integer  "goal_id"
-    t.boolean  "chosen"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "company_id",                 null: false
+    t.integer  "goal_id",                    null: false
+    t.boolean  "chosen",     default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.index ["company_id", "goal_id"], name: "index_comp_goals_on_company_id_and_goal_id", unique: true, using: :btree
     t.index ["company_id"], name: "index_comp_goals_on_company_id", using: :btree
     t.index ["goal_id"], name: "index_comp_goals_on_goal_id", using: :btree
@@ -242,7 +242,8 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.integer  "noB"
     t.integer  "noNotBbutAvail"
     t.integer  "noIll"
-    t.integer  "noRebuys"
+    t.integer  "noRebuysSPositive"
+    t.integer  "noRebuysSNegative"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.index ["comp_prod_q_cust_city_id"], name: "index_comp_prod_mq_cust_cities_on_comp_prod_q_cust_city_id", using: :btree
@@ -267,12 +268,28 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.integer  "noB"
     t.integer  "noNotBbutAvail"
     t.integer  "noIll"
-    t.integer  "noRebuys"
+    t.integer  "noRebuysPositive"
+    t.integer  "noRebuysNegative"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.index ["comp_prod_id", "comp_q_cust_city_id"], name: "index_comp_prod_q_cust_cities_on_cpqcc", unique: true, using: :btree
     t.index ["comp_prod_id"], name: "index_comp_prod_q_cust_cities_on_comp_prod_id", using: :btree
     t.index ["comp_q_cust_city_id"], name: "index_comp_prod_q_cust_cities_on_comp_q_cust_city_id", using: :btree
+  end
+
+  create_table "comp_prod_q_custs", force: :cascade do |t|
+    t.integer  "comp_prod_id",           null: false
+    t.integer  "quarter_id",             null: false
+    t.integer  "customer_id",            null: false
+    t.integer  "TotEval",      limit: 2
+    t.integer  "noD"
+    t.integer  "noB"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["comp_prod_id", "quarter_id", "customer_id"], name: "index_comp_prod_q_custs_on_comp_prod_per_q_per_cust", unique: true, using: :btree
+    t.index ["comp_prod_id"], name: "index_comp_prod_q_custs_on_comp_prod_id", using: :btree
+    t.index ["customer_id"], name: "index_comp_prod_q_custs_on_customer_id", using: :btree
+    t.index ["quarter_id"], name: "index_comp_prod_q_custs_on_quarter_id", using: :btree
   end
 
   create_table "comp_prod_q_stores", force: :cascade do |t|
@@ -295,16 +312,16 @@ ActiveRecord::Schema.define(version: 20180520192739) do
   create_table "comp_prod_q_webs", force: :cascade do |t|
     t.integer  "comp_prod_q_id", null: false
     t.integer  "comp_q_web_id",  null: false
+    t.integer  "Seq",            null: false
     t.integer  "salesNo"
     t.integer  "TotC"
     t.integer  "price"
     t.integer  "discount"
-    t.integer  "Seq"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-    t.index ["comp_prod_q_id", "comp_q_web_id", "Seq"], name: "index_comp_prod_q_webs_on_prod_q_and_web_and_Seq", unique: true, using: :btree
     t.index ["comp_prod_q_id", "comp_q_web_id"], name: "index_comp_prod_q_webs_on_comp_prod_q_id_and_comp_q_web_id", unique: true, using: :btree
     t.index ["comp_prod_q_id"], name: "index_comp_prod_q_webs_on_comp_prod_q_id", using: :btree
+    t.index ["comp_q_web_id", "Seq"], name: "index_comp_prod_q_webs_on_prod_q_and_web_and_Seq", unique: true, using: :btree
     t.index ["comp_q_web_id"], name: "index_comp_prod_q_webs_on_comp_q_web_id", using: :btree
   end
 
@@ -344,23 +361,29 @@ ActiveRecord::Schema.define(version: 20180520192739) do
   end
 
   create_table "comp_q_cust_cities", force: :cascade do |t|
-    t.integer  "comp_q_id",                                null: false
+    t.integer  "company_id",                               null: false
     t.integer  "cust_city_id",                             null: false
+    t.integer  "quarter_id"
+    t.integer  "q_no"
     t.integer  "noIllTot"
     t.integer  "noResearchD"
     t.integer  "noResearchB"
     t.integer  "noResearchSample"
     t.decimal  "noResearchBE",     precision: 3, scale: 2
+    t.integer  "noRebuysPositive"
+    t.integer  "noRebuysNegative"
     t.datetime "created_at",                               null: false
     t.datetime "updated_at",                               null: false
-    t.index ["comp_q_id", "cust_city_id"], name: "index_comp_q_cust_cities_on_comp_q_id_and_cust_city_id", unique: true, using: :btree
-    t.index ["comp_q_id"], name: "index_comp_q_cust_cities_on_comp_q_id", using: :btree
+    t.index ["company_id", "cust_city_id", "q_no"], name: "index_comp_q_cust_cities_on_comp_q_no_cust_city", unique: true, using: :btree
+    t.index ["company_id", "cust_city_id", "quarter_id"], name: "index_comp_q_cust_cities_on_comp_q_cust_city", unique: true, using: :btree
+    t.index ["company_id"], name: "index_comp_q_cust_cities_on_company_id", using: :btree
     t.index ["cust_city_id"], name: "index_comp_q_cust_cities_on_cust_city_id", using: :btree
+    t.index ["quarter_id"], name: "index_comp_q_cust_cities_on_quarter_id", using: :btree
   end
 
   create_table "comp_q_educs", force: :cascade do |t|
-    t.integer  "comp_q_id"
-    t.integer  "education_id"
+    t.integer  "comp_q_id",    null: false
+    t.integer  "education_id", null: false
     t.integer  "CPP"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
@@ -396,7 +419,7 @@ ActiveRecord::Schema.define(version: 20180520192739) do
   create_table "comp_q_priors", force: :cascade do |t|
     t.integer  "comp_q_id",             null: false
     t.integer  "customer_id",           null: false
-    t.integer  "Seq",         limit: 2
+    t.integer  "Seq",         limit: 2, null: false
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
     t.index ["comp_q_id", "Seq"], name: "index_comp_q_priors_on_comp_q_id_and_Seq", unique: true, using: :btree
@@ -485,9 +508,9 @@ ActiveRecord::Schema.define(version: 20180520192739) do
   end
 
   create_table "comp_qs", force: :cascade do |t|
-    t.integer  "company_id",                                                               null: false
-    t.integer  "quarter_id",                                                               null: false
-    t.decimal  "fundingPer",                     precision: 5, scale: 2, default: "100.0"
+    t.integer  "company_id",                                                           null: false
+    t.integer  "quarter_id",                                                           null: false
+    t.integer  "fundingPer",           limit: 2,                         default: 100
     t.integer  "cash"
     t.integer  "shares"
     t.integer  "income"
@@ -521,8 +544,8 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.integer  "improveChangeoverC"
     t.decimal  "imrpoveChangeoverPer",           precision: 3, scale: 2
     t.integer  "educationTotC"
-    t.datetime "created_at",                                                               null: false
-    t.datetime "updated_at",                                                               null: false
+    t.datetime "created_at",                                                           null: false
+    t.datetime "updated_at",                                                           null: false
     t.index ["company_id", "quarter_id"], name: "index_comp_qs_on_company_id_and_quarter_id", unique: true, using: :btree
     t.index ["company_id"], name: "index_comp_qs_on_company_id", using: :btree
     t.index ["quarter_id"], name: "index_comp_qs_on_quarter_id", using: :btree
@@ -532,8 +555,8 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.integer  "seller_id"
     t.integer  "buyer_id"
     t.integer  "prod_id"
-    t.integer  "quarter_id"
-    t.integer  "quarter_o_id"
+    t.integer  "quarter_id",                               null: false
+    t.integer  "quarter_o_no"
     t.integer  "quarterM",       limit: 2, default: 255
     t.integer  "price"
     t.integer  "advancePayment",           default: 0
@@ -550,14 +573,15 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.index ["buyer_id", "prod_id", "cancelled"], name: "index_comp_rnds_on_prod_avail", using: :btree
     t.index ["quarter_id"], name: "index_comp_rnds_on_quarter_id", using: :btree
     t.index ["seller_id", "buyer_id", "prod_id", "cancelled"], name: "index_comp_rnds_on_same_open_contract", using: :btree
-    t.index ["seller_id", "prod_id", "quarter_o_id", "cancelled"], name: "index_comp_rnds_on_buyer_id_as_seller_id", using: :btree
+    t.index ["seller_id", "prod_id", "quarter_o_no", "cancelled"], name: "index_comp_rnds_on_buyer_id_as_seller_id", using: :btree
   end
 
   create_table "comp_users", force: :cascade do |t|
     t.integer  "company_id", null: false
-    t.integer  "user_id"
+    t.integer  "user_id",    null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["company_id", "user_id"], name: "index_comp_users_on_company_id_and_user_id", unique: true, using: :btree
     t.index ["company_id"], name: "index_comp_users_on_company_id", using: :btree
     t.index ["user_id"], name: "index_comp_users_on_user_id", using: :btree
   end
@@ -572,6 +596,7 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.datetime "updated_at",   null: false
     t.index ["continent_id"], name: "index_companies_on_continent_id", using: :btree
     t.index ["game_id", "ceo_id"], name: "index_companies_on_game_id_and_ceo_id", unique: true, using: :btree
+    t.index ["game_id", "name"], name: "index_companies_on_game_id_and_name", unique: true, using: :btree
     t.index ["game_id"], name: "index_companies_on_game_id", using: :btree
     t.index ["name"], name: "index_companies_on_name", using: :btree
   end
@@ -583,7 +608,7 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.decimal  "salaryWI",                  precision: 3, scale: 2
     t.integer  "salaryWC"
     t.decimal  "healthWI",                  precision: 3, scale: 2
-    t.integer  "health_w_id"
+    t.integer  "health_w_id",                                       null: false
     t.decimal  "vacationWI",                precision: 3, scale: 2
     t.integer  "vacationWW",      limit: 2
     t.integer  "vacationWC"
@@ -593,7 +618,7 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.decimal  "salaryEI",                  precision: 3, scale: 2
     t.integer  "salaryED"
     t.decimal  "healthEI",                  precision: 3, scale: 2
-    t.integer  "health_e_id"
+    t.integer  "health_e_id",                                       null: false
     t.decimal  "vacationEI",                precision: 3, scale: 2
     t.integer  "vacationDI",      limit: 2
     t.decimal  "pensionEI",                 precision: 3, scale: 2
@@ -639,21 +664,11 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.index ["customer_id"], name: "index_cust_adv_media_on_customer_id", using: :btree
   end
 
-  create_table "cust_category_advs", force: :cascade do |t|
-    t.integer  "category_adv_id", null: false
-    t.integer  "customer_id",     null: false
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.index ["category_adv_id", "customer_id"], name: "index_cust_category_advs_on_category_adv_id_and_customer_id", unique: true, using: :btree
-    t.index ["category_adv_id"], name: "index_cust_category_advs_on_category_adv_id", using: :btree
-    t.index ["customer_id"], name: "index_cust_category_advs_on_customer_id", using: :btree
-  end
-
   create_table "cust_category_prods", force: :cascade do |t|
     t.integer  "category_prod_id",                                        null: false
     t.integer  "customer_id",                                             null: false
-    t.integer  "CharsWantedNo"
-    t.decimal  "CharsWantedNoS",   precision: 3, scale: 2
+    t.integer  "charsWantedNo"
+    t.decimal  "charsWantedNoSΙ",  precision: 3, scale: 2
     t.boolean  "acceptBetter",                             default: true, null: false
     t.datetime "created_at",                                              null: false
     t.datetime "updated_at",                                              null: false
@@ -705,8 +720,8 @@ ActiveRecord::Schema.define(version: 20180520192739) do
   end
 
   create_table "cust_g_funcs", force: :cascade do |t|
-    t.integer  "game_id",           null: false
     t.integer  "customer_id",       null: false
+    t.integer  "game_id",           null: false
     t.integer  "function_usage_id", null: false
     t.integer  "function_id"
     t.integer  "cust_func_id"
@@ -717,7 +732,7 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.index ["cust_func_id"], name: "index_cust_g_funcs_on_cust_func_id", using: :btree
-    t.index ["customer_id", "function_id", "game_id"], name: "index_cust_g_funcs_on_customer_id_and_function_id_and_game_id", unique: true, using: :btree
+    t.index ["customer_id", "function_usage_id", "game_id"], name: "index_cust_g_funcs_on_cust_id_and_function_id_and_g_id", unique: true, using: :btree
     t.index ["customer_id"], name: "index_cust_g_funcs_on_customer_id", using: :btree
     t.index ["function_id"], name: "index_cust_g_funcs_on_function_id", using: :btree
     t.index ["function_usage_id"], name: "index_cust_g_funcs_on_function_usage_id", using: :btree
@@ -740,12 +755,16 @@ ActiveRecord::Schema.define(version: 20180520192739) do
   end
 
   create_table "cust_gs", force: :cascade do |t|
-    t.integer  "customer_id",                                     null: false
-    t.integer  "game_id",                                         null: false
-    t.decimal  "rebuyPer",                precision: 3, scale: 2
-    t.integer  "rebuyInterval", limit: 2
-    t.datetime "created_at",                                      null: false
-    t.datetime "updated_at",                                      null: false
+    t.integer  "customer_id",                             null: false
+    t.integer  "game_id",                                 null: false
+    t.decimal  "rebuyPer",                  precision: 2
+    t.integer  "rebuyInterval",   limit: 2
+    t.decimal  "A1_prod_char_SI",           precision: 2
+    t.decimal  "A2_adv_char_SI",            precision: 2
+    t.decimal  "A3_price_SI",               precision: 2
+    t.decimal  "A4_quality_SI",             precision: 2
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
     t.index ["customer_id", "game_id"], name: "index_cust_gs_on_customer_id_and_game_id", unique: true, using: :btree
     t.index ["customer_id"], name: "index_cust_gs_on_customer_id", using: :btree
     t.index ["game_id"], name: "index_cust_gs_on_game_id", using: :btree
@@ -764,8 +783,8 @@ ActiveRecord::Schema.define(version: 20180520192739) do
   end
 
   create_table "cust_q_funcs", force: :cascade do |t|
-    t.integer  "quarter_id",        null: false
     t.integer  "customer_id",       null: false
+    t.integer  "quarter_id",        null: false
     t.integer  "function_usage_id", null: false
     t.integer  "function_id"
     t.integer  "cust_func_id"
@@ -776,7 +795,7 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.index ["cust_func_id"], name: "index_cust_q_funcs_on_cust_func_id", using: :btree
-    t.index ["customer_id", "function_id", "quarter_id"], name: "index_cust_q_funcs_on_cust_id_and_function_id_and_q_id", unique: true, using: :btree
+    t.index ["customer_id", "function_usage_id", "quarter_id"], name: "index_cust_q_funcs_on_cust_id_and_function_id_and_q_id", unique: true, using: :btree
     t.index ["customer_id"], name: "index_cust_q_funcs_on_customer_id", using: :btree
     t.index ["function_id"], name: "index_cust_q_funcs_on_function_id", using: :btree
     t.index ["function_usage_id"], name: "index_cust_q_funcs_on_function_usage_id", using: :btree
@@ -784,41 +803,47 @@ ActiveRecord::Schema.define(version: 20180520192739) do
   end
 
   create_table "customers", force: :cascade do |t|
-    t.integer  "version_id",                                           null: false
-    t.string   "name",                                                 null: false
+    t.integer  "version_id",                                                        null: false
+    t.string   "name",                                                              null: false
     t.string   "alt"
     t.text     "description"
-    t.decimal  "marketsize_total",             precision: 3, scale: 2
-    t.decimal  "purchaseRmin",                 precision: 3, scale: 2
-    t.decimal  "purchaseRmax",                 precision: 3, scale: 2
-    t.decimal  "revisitRmin",                  precision: 3, scale: 2
-    t.decimal  "revisitRmax",                  precision: 3, scale: 2
-    t.decimal  "rebuyRmin",                    precision: 3, scale: 2
-    t.decimal  "rebuyRmax",                    precision: 3, scale: 2
-    t.integer  "rebuyIntervalmin"
+    t.integer  "scales",              limit: 2,                         default: 2
+    t.decimal  "marketsize_total",              precision: 3, scale: 2
+    t.decimal  "purchaseRmin",                  precision: 3, scale: 2
+    t.decimal  "purchaseRmax",                  precision: 3, scale: 2
+    t.decimal  "revisitRmin",                   precision: 3, scale: 2
+    t.decimal  "revisitRmax",                   precision: 3, scale: 2
+    t.decimal  "rebuyRmin",                     precision: 3, scale: 2,             null: false
+    t.decimal  "rebuyRmax",                     precision: 3, scale: 2,             null: false
+    t.integer  "rebuyIntervalmin",                                                  null: false
     t.integer  "rebuyIntervalmax"
-    t.integer  "rebuyPar",           limit: 2
-    t.decimal  "A1_prod_char_SI",              precision: 3, scale: 2
-    t.decimal  "A2_adv_char_SI",               precision: 3, scale: 2
-    t.decimal  "A3_price_SI",                  precision: 3, scale: 2
-    t.decimal  "A4_quality_SI",                precision: 3, scale: 2
-    t.decimal  "a_generalI",                   precision: 3, scale: 2
-    t.decimal  "a_prod_nameI",                 precision: 3, scale: 2
-    t.decimal  "a_char_orderI",                precision: 3, scale: 2
+    t.integer  "rebuyPar",            limit: 2
+    t.decimal  "A1_prod_char_SI_min",           precision: 3, scale: 2,             null: false
+    t.decimal  "A1_prod_char_SI_max",           precision: 3, scale: 2,             null: false
+    t.decimal  "A2_adv_char_SI_min",            precision: 3, scale: 2,             null: false
+    t.decimal  "A2_adv_char_SI_max",            precision: 3, scale: 2,             null: false
+    t.decimal  "A3_price_SI_min",               precision: 3, scale: 2,             null: false
+    t.decimal  "A3_price_SI_max",               precision: 3, scale: 2,             null: false
+    t.decimal  "A4_quality_SI_min",             precision: 3, scale: 2,             null: false
+    t.decimal  "A4_quality_SI_max",             precision: 3, scale: 2,             null: false
+    t.decimal  "a_generalI",                    precision: 3, scale: 2
+    t.decimal  "a_prod_nameI",                  precision: 3, scale: 2
+    t.decimal  "a_char_orderI",                 precision: 3, scale: 2
     t.integer  "priceLow"
-    t.decimal  "q_D1ReliabilitySI",            precision: 3, scale: 2
-    t.decimal  "q_D1ReliabilityRSI",           precision: 3, scale: 2
-    t.decimal  "q_D2ReputationSI",             precision: 3, scale: 2
-    t.decimal  "q_D3RealAdvSI",                precision: 3, scale: 2
-    t.decimal  "q_D4DiscountSI",               precision: 3, scale: 2
+    t.decimal  "q_D1ReliabilitySI",             precision: 3, scale: 2
+    t.decimal  "q_D1ReliabilityRSI",            precision: 3, scale: 2
+    t.decimal  "q_D2ReputationSI",              precision: 3, scale: 2
+    t.decimal  "q_D3RealAdvSI",                 precision: 3, scale: 2
+    t.decimal  "q_D4DiscountSI",                precision: 3, scale: 2
     t.integer  "adv_lines_no"
-    t.decimal  "adv_lines_no_S",               precision: 3, scale: 2
-    t.decimal  "advMediaI",                    precision: 3, scale: 2
-    t.decimal  "advCityI",                     precision: 3, scale: 2
+    t.decimal  "adv_lines_no_S",                precision: 3, scale: 2
+    t.decimal  "advMediaI",                     precision: 3, scale: 2
+    t.decimal  "advCityI",                      precision: 3, scale: 2
     t.integer  "a_appear_media_id"
-    t.datetime "created_at",                                           null: false
-    t.datetime "updated_at",                                           null: false
+    t.datetime "created_at",                                                        null: false
+    t.datetime "updated_at",                                                        null: false
     t.index ["name"], name: "index_customers_on_name", using: :btree
+    t.index ["version_id", "name"], name: "index_customers_on_version_id_and_name", unique: true, using: :btree
     t.index ["version_id"], name: "index_customers_on_version_id", using: :btree
   end
 
@@ -829,6 +854,7 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.integer  "duration"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["version_id", "name"], name: "index_educations_on_version_id_and_name", unique: true, using: :btree
     t.index ["version_id"], name: "index_educations_on_version_id", using: :btree
   end
 
@@ -841,6 +867,7 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
     t.index ["capacity"], name: "index_factory_capacities_on_capacity", using: :btree
+    t.index ["version_id", "capacity"], name: "index_factory_capacities_on_version_id_and_capacity", unique: true, using: :btree
     t.index ["version_id"], name: "index_factory_capacities_on_version_id", using: :btree
   end
 
@@ -851,6 +878,7 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.boolean  "revenue",                default: true, null: false
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
+    t.index ["financial_statement_id", "name"], name: "index_fin_line_items_on_financial_statement_id_and_name", unique: true, using: :btree
     t.index ["financial_statement_id"], name: "index_fin_line_items_on_financial_statement_id", using: :btree
     t.index ["function_id"], name: "index_fin_line_items_on_function_id", using: :btree
     t.index ["name"], name: "index_fin_line_items_on_name", using: :btree
@@ -858,10 +886,11 @@ ActiveRecord::Schema.define(version: 20180520192739) do
 
   create_table "financial_statements", force: :cascade do |t|
     t.integer  "version_id", null: false
-    t.string   "usage",      null: false
+    t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["usage"], name: "index_financial_statements_on_usage", using: :btree
+    t.index ["name"], name: "index_financial_statements_on_name", using: :btree
+    t.index ["version_id", "name"], name: "index_financial_statements_on_version_id_and_name", unique: true, using: :btree
     t.index ["version_id"], name: "index_financial_statements_on_version_id", using: :btree
   end
 
@@ -875,8 +904,8 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.float    "parD"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.index ["function_id", "game_id"], name: "index_function_gs_on_function_id_and_game_id", unique: true, using: :btree
     t.index ["function_id"], name: "index_function_gs_on_function_id", using: :btree
+    t.index ["function_usage_id", "game_id"], name: "index_function_gs_on_function_usage_id_and_game_id", unique: true, using: :btree
     t.index ["function_usage_id"], name: "index_function_gs_on_function_usage_id", using: :btree
     t.index ["game_id"], name: "index_function_gs_on_game_id", using: :btree
   end
@@ -910,7 +939,6 @@ ActiveRecord::Schema.define(version: 20180520192739) do
   end
 
   create_table "functions", force: :cascade do |t|
-    t.integer  "version_id",        null: false
     t.integer  "function_usage_id", null: false
     t.string   "name",              null: false
     t.string   "function",          null: false
@@ -938,10 +966,9 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.index ["function_usage_id", "function"], name: "index_functions_on_function_usage_id_and_function", unique: true, using: :btree
+    t.index ["function_usage_id", "name"], name: "index_functions_on_function_usage_id_and_name", unique: true, using: :btree
     t.index ["function_usage_id"], name: "index_functions_on_function_usage_id", using: :btree
     t.index ["name"], name: "index_functions_on_name", using: :btree
-    t.index ["version_id", "function_usage_id", "name"], name: "index_functions_on_version_id_and_function_usage_id_and_name", unique: true, using: :btree
-    t.index ["version_id"], name: "index_functions_on_version_id", using: :btree
   end
 
   create_table "games", force: :cascade do |t|
@@ -958,6 +985,7 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.datetime "created_at",                                null: false
     t.datetime "updated_at",                                null: false
     t.index ["name"], name: "index_games_on_name", using: :btree
+    t.index ["version_id", "name"], name: "index_games_on_version_id_and_name", unique: true, using: :btree
     t.index ["version_id"], name: "index_games_on_version_id", using: :btree
   end
 
@@ -966,6 +994,7 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["version_id", "name"], name: "index_goals_on_version_id_and_name", unique: true, using: :btree
     t.index ["version_id"], name: "index_goals_on_version_id", using: :btree
   end
 
@@ -985,38 +1014,43 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_healths_on_name", using: :btree
+    t.index ["version_id", "name"], name: "index_healths_on_version_id_and_name", unique: true, using: :btree
     t.index ["version_id"], name: "index_healths_on_version_id", using: :btree
   end
 
   create_table "interests", force: :cascade do |t|
+    t.integer  "version_id",                          null: false
     t.integer  "function_id"
-    t.string   "usage",                               null: false
+    t.string   "name",                                null: false
     t.decimal  "interest",    precision: 3, scale: 2
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.index ["function_id"], name: "index_interests_on_function_id", using: :btree
+    t.index ["version_id", "name"], name: "index_interests_on_version_id_and_name", unique: true, using: :btree
+    t.index ["version_id"], name: "index_interests_on_version_id", using: :btree
   end
 
   create_table "loans", force: :cascade do |t|
     t.integer  "interest_id",                   null: false
-    t.string   "usage",                         null: false
+    t.string   "name",                          null: false
     t.boolean  "shares_danger", default: false, null: false
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
+    t.index ["interest_id", "name"], name: "index_loans_on_interest_id_and_name", unique: true, using: :btree
     t.index ["interest_id"], name: "index_loans_on_interest_id", using: :btree
   end
 
   create_table "months", force: :cascade do |t|
-    t.integer  "version_id",                                      null: false
-    t.integer  "no",                                              null: false
-    t.string   "name",                                            null: false
-    t.integer  "noDays",                             default: 30, null: false
-    t.decimal  "seasonPer",  precision: 6, scale: 2
-    t.datetime "created_at",                                      null: false
-    t.datetime "updated_at",                                      null: false
+    t.integer  "version_id",                                           null: false
+    t.integer  "no",                                                   null: false
+    t.string   "name",                                                 null: false
+    t.integer  "noDays",                             default: 30,      null: false
+    t.decimal  "seasonPer",  precision: 6, scale: 2, default: "100.0"
+    t.datetime "created_at",                                           null: false
+    t.datetime "updated_at",                                           null: false
     t.index ["name"], name: "index_months_on_name", using: :btree
     t.index ["noDays"], name: "index_months_on_noDays", using: :btree
+    t.index ["version_id", "no"], name: "index_months_on_version_id_and_no", unique: true, using: :btree
     t.index ["version_id"], name: "index_months_on_version_id", using: :btree
   end
 
@@ -1049,10 +1083,12 @@ ActiveRecord::Schema.define(version: 20180520192739) do
   end
 
   create_table "need_prod_chars", force: :cascade do |t|
-    t.integer  "need_id",      null: false
-    t.integer  "prod_char_id", null: false
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.integer  "need_id",                              null: false
+    t.integer  "prod_char_id",                         null: false
+    t.decimal  "weight",       precision: 3, scale: 2
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+    t.index ["need_id", "prod_char_id"], name: "index_need_prod_chars_on_need_id_and_prod_char_id", unique: true, using: :btree
     t.index ["need_id"], name: "index_need_prod_chars_on_need_id", using: :btree
     t.index ["prod_char_id"], name: "index_need_prod_chars_on_prod_char_id", using: :btree
   end
@@ -1063,6 +1099,7 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.decimal  "weight",     precision: 3, scale: 2
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
+    t.index ["need_id", "score_id"], name: "index_need_scores_on_need_id_and_score_id", unique: true, using: :btree
     t.index ["need_id"], name: "index_need_scores_on_need_id", using: :btree
     t.index ["score_id"], name: "index_need_scores_on_score_id", using: :btree
   end
@@ -1073,6 +1110,7 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_need_types_on_name", using: :btree
+    t.index ["version_id", "name"], name: "index_need_types_on_version_id_and_name", unique: true, using: :btree
     t.index ["version_id"], name: "index_need_types_on_version_id", using: :btree
   end
 
@@ -1082,6 +1120,7 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.index ["name"], name: "index_needs_on_name", using: :btree
+    t.index ["need_type_id", "name"], name: "index_needs_on_need_type_id_and_name", unique: true, using: :btree
     t.index ["need_type_id"], name: "index_needs_on_need_type_id", using: :btree
   end
 
@@ -1097,6 +1136,7 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
     t.index ["avail"], name: "index_prod_chars_on_avail", using: :btree
+    t.index ["category_prod_id", "name"], name: "index_prod_chars_on_category_prod_id_and_name", unique: true, using: :btree
     t.index ["category_prod_id", "scale"], name: "index_prod_chars_on_category_prod_id_and_scale", unique: true, using: :btree
     t.index ["category_prod_id"], name: "index_prod_chars_on_category_prod_id", using: :btree
     t.index ["name"], name: "index_prod_chars_on_name", using: :btree
@@ -1124,12 +1164,13 @@ ActiveRecord::Schema.define(version: 20180520192739) do
 
   create_table "scores", force: :cascade do |t|
     t.integer  "version_id",  null: false
-    t.string   "name",        null: false
     t.integer  "function_id"
+    t.string   "name",        null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["function_id"], name: "index_scores_on_function_id", using: :btree
     t.index ["name"], name: "index_scores_on_name", using: :btree
+    t.index ["version_id", "name"], name: "index_scores_on_version_id_and_name", unique: true, using: :btree
     t.index ["version_id"], name: "index_scores_on_version_id", using: :btree
   end
 
@@ -1137,6 +1178,7 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.integer  "name1_id",    null: false
     t.integer  "name2_id",    null: false
     t.integer  "function_id"
+    t.integer  "distance"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["function_id"], name: "index_transfer_costs_on_function_id", using: :btree
@@ -1197,12 +1239,14 @@ ActiveRecord::Schema.define(version: 20180520192739) do
     t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["version_id", "name"], name: "index_web_features_on_version_id_and_name", unique: true, using: :btree
     t.index ["version_id"], name: "index_web_features_on_version_id", using: :btree
   end
 
   create_table "web_supplies", force: :cascade do |t|
     t.integer  "web_feature_id",           null: false
     t.integer  "continent_id",             null: false
+    t.string   "name"
     t.integer  "initC"
     t.integer  "supplyWebPS",    limit: 2
     t.datetime "created_at",               null: false
@@ -1218,10 +1262,11 @@ ActiveRecord::Schema.define(version: 20180520192739) do
   add_foreign_key "adv_media", "versions"
   add_foreign_key "category_advs", "versions"
   add_foreign_key "category_prods", "versions"
+  add_foreign_key "chat_gs", "companies", column: "name1_id"
+  add_foreign_key "chat_gs", "companies", column: "name2_id"
   add_foreign_key "chat_gs", "games"
   add_foreign_key "chat_lines", "chat_gs"
-  add_foreign_key "chat_users", "chat_gs"
-  add_foreign_key "chat_users", "users"
+  add_foreign_key "chat_lines", "users"
   add_foreign_key "cities", "continents"
   add_foreign_key "comp_adv_chars", "adv_chars"
   add_foreign_key "comp_adv_chars", "comp_advs"
@@ -1250,6 +1295,9 @@ ActiveRecord::Schema.define(version: 20180520192739) do
   add_foreign_key "comp_prod_q_cities", "comp_prod_qs"
   add_foreign_key "comp_prod_q_cust_cities", "comp_prods"
   add_foreign_key "comp_prod_q_cust_cities", "comp_q_cust_cities"
+  add_foreign_key "comp_prod_q_custs", "comp_prods"
+  add_foreign_key "comp_prod_q_custs", "customers"
+  add_foreign_key "comp_prod_q_custs", "quarters"
   add_foreign_key "comp_prod_q_stores", "comp_prod_qs"
   add_foreign_key "comp_prod_q_stores", "comp_q_stores"
   add_foreign_key "comp_prod_q_webs", "comp_prod_qs"
@@ -1258,8 +1306,9 @@ ActiveRecord::Schema.define(version: 20180520192739) do
   add_foreign_key "comp_prod_qs", "quarters"
   add_foreign_key "comp_prods", "comp_qs"
   add_foreign_key "comp_prods", "quarters", column: "q_end_id"
-  add_foreign_key "comp_q_cust_cities", "comp_qs"
+  add_foreign_key "comp_q_cust_cities", "companies"
   add_foreign_key "comp_q_cust_cities", "cust_cities"
+  add_foreign_key "comp_q_cust_cities", "quarters"
   add_foreign_key "comp_q_educs", "comp_qs"
   add_foreign_key "comp_q_educs", "educations"
   add_foreign_key "comp_q_fins", "comp_qs"
@@ -1288,7 +1337,6 @@ ActiveRecord::Schema.define(version: 20180520192739) do
   add_foreign_key "comp_rnds", "companies", column: "seller_id"
   add_foreign_key "comp_rnds", "prod_chars", column: "prod_id"
   add_foreign_key "comp_rnds", "quarters"
-  add_foreign_key "comp_rnds", "quarters", column: "quarter_o_id"
   add_foreign_key "comp_users", "companies"
   add_foreign_key "comp_users", "users"
   add_foreign_key "companies", "continents"
@@ -1301,8 +1349,6 @@ ActiveRecord::Schema.define(version: 20180520192739) do
   add_foreign_key "cust_adv_chars", "customers"
   add_foreign_key "cust_adv_media", "adv_media"
   add_foreign_key "cust_adv_media", "customers"
-  add_foreign_key "cust_category_advs", "category_advs"
-  add_foreign_key "cust_category_advs", "customers"
   add_foreign_key "cust_category_prods", "category_prods"
   add_foreign_key "cust_category_prods", "customers"
   add_foreign_key "cust_cities", "cities"
@@ -1339,7 +1385,6 @@ ActiveRecord::Schema.define(version: 20180520192739) do
   add_foreign_key "function_qs", "quarters"
   add_foreign_key "function_usages", "versions"
   add_foreign_key "functions", "function_usages"
-  add_foreign_key "functions", "versions"
   add_foreign_key "games", "months", column: "first_month_id"
   add_foreign_key "games", "versions"
   add_foreign_key "goals", "versions"
@@ -1347,6 +1392,7 @@ ActiveRecord::Schema.define(version: 20180520192739) do
   add_foreign_key "health_conts", "healths"
   add_foreign_key "healths", "versions"
   add_foreign_key "interests", "functions"
+  add_foreign_key "interests", "versions"
   add_foreign_key "loans", "interests"
   add_foreign_key "months", "versions"
   add_foreign_key "mqs", "months"
@@ -1363,8 +1409,8 @@ ActiveRecord::Schema.define(version: 20180520192739) do
   add_foreign_key "quarters", "games"
   add_foreign_key "scores", "functions"
   add_foreign_key "scores", "versions"
-  add_foreign_key "transfer_costs", "cities", column: "name2_id"
   add_foreign_key "transfer_costs", "continents", column: "name1_id"
+  add_foreign_key "transfer_costs", "continents", column: "name2_id"
   add_foreign_key "transfer_costs", "functions"
   add_foreign_key "users", "roles"
   add_foreign_key "web_features", "versions"
