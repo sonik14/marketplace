@@ -1,9 +1,13 @@
 ActiveAdmin.register Game do
-	permit_params :version_id, :first_month_id, :name, :duration
+	permit_params :version_id, :first_month_id, :name, :duration, :starting_year, :illPer, :autodelete, :trainExtraAvail
 	before_filter :ensure_admin!
 
 	# Disable edit and destroy actions
-	actions :index, :show, :new, :create
+  	actions :all, except: [:delete, :destroy]
+
+	config.action_items.delete_if { |item|
+		  item.display_on?(:show)
+	}
 
 	action_item :delete, only: :show do
 		q = Quarter.where(game_id: game.id).order(q_no: :desc).take
@@ -18,10 +22,15 @@ ActiveAdmin.register Game do
 	  	redirect_to admin_games_path
 	end
 
+	action_item :edit, only: :show do
+		q = Quarter.where(game_id: game.id).order(q_no: :desc).take
+		link_to "Change Initial Game Parameters", edit_admin_game_path(game), method: :get if q.nil?
+	end
+
 	action_item :proceed, only: :show do
-	q = Quarter.where(game_id: game.id).order(q_no: :desc).take
-	if q.nil?
-  		link_to "Start Game", proceed_admin_game_path(game), method: :put, 
+		q = Quarter.where(game_id: game.id).order(q_no: :desc).take
+		if q.nil?
+  			link_to "Start Game", proceed_admin_game_path(game), method: :put, 
 		  		data: {confirm: "Please be sure that you have filled all the required parameters:\n-players of the game\nDo you want to start the game now?" } #, target: "_blank" if you want to open new window
 		elsif q.q_no < game.duration
 	  		link_to "Go to Next Quarter", proceed_admin_game_path(game), method: :put, 
@@ -243,6 +252,54 @@ ActiveAdmin.register Game do
   			redirect_to(admin_quarters_path, flash: {warning: 'Fill Tables with Q and G before starting the Game'})
 		end
   	end
+
+
+	filter :version_id
+	filter :name
+	filter :first_month_id
+	filter :starting_year
+	filter :duration
+	filter :trainExtraAvail
+	filter :illPer
+	filter :current_quarter
+	filter :finished
+
+	index do
+		selectable_column
+		id_column
+		column :version, sortable: 'games.version_id'
+		column :name
+		column :duration
+		column :current_quarter
+		column :finished
+		actions
+	end
+
+	form do |f|
+		unless f.object.new_record?
+			version = Version.find(game.version_id)
+			version.illPerRmin = (version.illPerRmin*100).round(0)
+			version.illPerRmax = (version.illPerRmax*100).round(0)
+		end
+		q = Quarter.where(game_id: game.id).order(q_no: :desc).take
+		f.inputs do
+			f.input :version, include_blank: false, input_html: {disabled: f.object.new_record? ? false : true}
+			f.input :name, include_blank: false, input_html: {disabled: f.object.new_record? ? false : true}
+			f.input :first_month, include_blank: false, input_html: {disabled: f.object.new_record? ? false : true}
+			f.input :starting_year, input_html: {disabled: f.object.new_record? ? false : true},
+					label: "Starting year [Range: 1990-#{Time.current.year}]"
+      		f.input :duration, min: version.durationMin, max: version.durationMax, step: 1, input_html: {disabled: q.nil? ? false : true},
+      				label: "Duration [Range: #{version.durationMin}-#{version.durationMax}]" unless f.object.new_record?
+			f.input :trainExtraAvail, min: version.durationMin, max: (version.durationMax+1), step: 1, input_html: {disabled: q.nil? ? false : true}, 
+					label: "Choose the Quarter when extra Education Programms will be available to Users or leave it empty if you don't want to include it in this game run" unless f.object.new_record?
+			f.input :illPer, min: version.illPerRmin, max: version.illPerRmax, step: 1, input_html: {disabled: q.nil? ? false : true}, 
+					label: "Choose the Percent of Customers who will reject a company for their next buy, if they have faced shortage of desired product in previous quarter [Range: #{version.illPerRmin}-#{version.illPerRmax}, Decimals: 0]" unless f.object.new_record?
+			f.label "Choose the date when this Game Data will be automatically deleted or leave it empty if you want to keep it", class: 'paddingLeft block bold gray' unless f.object.new_record?
+			f.input :autodelete, start_year: (Time.current.year+2), end_year: (Time.current.year+10) unless f.object.new_record?
+		end
+		f.actions
+	end
+# to assign values to inputs use input_html: {value: XX}
 
 	show do
 		default_main_content
