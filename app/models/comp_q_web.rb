@@ -4,4 +4,6 @@ class CompQWeb < ApplicationRecord
 
   has_many :comp_prod_q_webs
   has_many :comp_q_web_supplies
+
+  validates :comp_q, uniqueness: {scope: :continent}, presence: true
 end
