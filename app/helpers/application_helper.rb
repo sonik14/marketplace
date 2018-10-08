@@ -20,7 +20,7 @@ module ApplicationHelper
           end
           if function.parAscale.nil?
             changed = true
-            function.parAscale = 1
+            function.parAscale = 2
           end
         end
         unless function.parBdef.nil?
@@ -34,7 +34,7 @@ module ApplicationHelper
           end
           if function.parBscale.nil?
             changed = true
-            function.parBscale = 1
+            function.parBscale = 2
           end
         end
         unless function.parCdef.nil?
@@ -48,7 +48,7 @@ module ApplicationHelper
           end
           if function.parCscale.nil?
             changed = true
-            function.parCscale = 1
+            function.parCscale = 2
           end
         end
         unless function.parDdef.nil?
@@ -62,7 +62,7 @@ module ApplicationHelper
           end
           if function.parDscale.nil?
             changed = true
-            function.parDscale = 1
+            function.parDscale = 2
           end
         end
         if changed
@@ -157,38 +157,50 @@ module ApplicationHelper
               parCmax: function.parCmax,
               parDdef: function.parDdef,
               parDmin: function.parDmin,
-              parDmax: function.parDmax,
+              parDmax: function.parDmax
             )
           end
         end
 
         if self.parA.nil?
           self.parA = function.parAdef
-        elsif self.parA > function.parAmax
-          self.parA = function.parAmax
-        elsif self.parA < function.parAmin
-          self.parA = function.parAmin
+        else
+          self.parA = self.parA.round(function.parAscale)
+          if self.parA > function.parAmax
+            self.parA = function.parAmax
+          elsif self.parA < function.parAmin
+            self.parA = function.parAmin
+          end
         end
         if self.parB.nil?
           self.parB = function.parBdef
-        elsif self.parB > function.parBmax
-          self.parB = function.parBmax
-        elsif self.parB < function.parBmin
-          self.parB = function.parBmin
+        else
+          self.parB = self.parB.round(function.parBscale)
+          if self.parB > function.parBmax
+            self.parB = function.parBmax
+          elsif self.parB < function.parBmin
+            self.parB = function.parBmin
+          end
         end
         if self.parC.nil?
           self.parC = function.parCdef
-        elsif self.parC > function.parCmax
-          self.parC = function.parCmax
-        elsif self.parC < function.parCmin
-          self.parC = function.parCmin
+        else
+          self.parC = self.parC.round(function.parCscale)
+          if self.parC > function.parCmax
+            self.parC = function.parCmax
+          elsif self.parC < function.parCmin
+            self.parC = function.parCmin
+          end
         end
         if self.parD.nil?
           self.parD = function.parDdef
-        elsif self.parD > function.parDmax
-          self.parD = function.parDmax
-        elsif self.parD < function.parDmin
-          self.parD = function.parDmin
+        else
+          self.parD = self.parD.round(function.parDscale)
+          if self.parD > function.parDmax
+            self.parD = function.parDmax
+          elsif self.parD < function.parDmin
+            self.parD = function.parDmin
+          end
         end
       end
     end
