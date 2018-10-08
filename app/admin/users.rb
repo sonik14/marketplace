@@ -2,6 +2,8 @@ ActiveAdmin.register User do
   permit_params :role_id, :email, :first_name, :last_name, :username, :password, :password_confirmation
   before_filter :ensure_admin!
 
+  actions :all, except: [:delete, :destroy]
+
   index do
     selectable_column
     id_column

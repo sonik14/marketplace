@@ -4,9 +4,10 @@ class CreateCustomers < ActiveRecord::Migration[5.0]
 
       t.belongs_to :version, foreign_key: true, null: false
 
-      t.string  :name, unique: true, index: true, null: false
+      t.string  :name, index: true, null: false
       t.string  :alt
       t.text    :description
+      t.integer :scales, unsigned: true, limit: 1, default: 2 # the scales used in this table, for decimals precision
       #changed from type to name for better compatibility (for instance: active admin needs name for better representation in admin panel)
       t.decimal :marketsize_total, unsigned: true, precision: 3, scale: 2 #not equally distributed per city
       #if werknemers are 20% of customers it does not mean that the 20% of Athens customers will be werknemers
@@ -14,10 +15,10 @@ class CreateCustomers < ActiveRecord::Migration[5.0]
       t.decimal :purchaseRmax, unsigned: true, precision: 3, scale: 2
       t.decimal :revisitRmin, unsigned: true, precision: 3, scale: 2
       t.decimal :revisitRmax, unsigned: true, precision: 3, scale: 2
-      t.decimal :rebuyRmin, unsigned: true, precision: 3, scale: 2
-      t.decimal :rebuyRmax, unsigned: true, precision: 3, scale: 2
+      t.decimal :rebuyRmin, unsigned: true, precision: 3, scale: 2, null: false
+      t.decimal :rebuyRmax, unsigned: true, precision: 3, scale: 2, null: false
       # the range in the percentage of the customer who will buy again within the rebuyInterval period
-      t.integer :rebuyIntervalmin, unsigned: true
+      t.integer :rebuyIntervalmin, unsigned: true, null: false
       t.integer :rebuyIntervalmax, unsigned: true
       # within these amount of quarters, we take rebuyers into consideration
       # we take that number as the middle part of the distribution the rebuy will have.
@@ -30,10 +31,14 @@ class CreateCustomers < ActiveRecord::Migration[5.0]
 
       # PRODUCT AND ADVERTISMENT RATING -------------------------
 
-      t.decimal :A1_prod_char_SI, unsigned: true, precision: 3, scale: 2 #3 #weight, sensitivity
-      t.decimal :A2_adv_char_SI, unsigned: true, precision: 3, scale: 2 #2
-      t.decimal :A3_price_SI, unsigned: true, precision: 3, scale: 2 #1
-      t.decimal :A4_quality_SI, unsigned: true, precision: 3, scale: 2 #0 #sum 1
+      t.decimal :A1_prod_char_SI_min, unsigned: true, precision: 3, scale: 2, null: false #3 #weight, sensitivity
+      t.decimal :A1_prod_char_SI_max, unsigned: true, precision: 3, scale: 2, null: false #3 #weight, sensitivity
+      t.decimal :A2_adv_char_SI_min, unsigned: true, precision: 3, scale: 2, null: false #2
+      t.decimal :A2_adv_char_SI_max, unsigned: true, precision: 3, scale: 2, null: false #2
+      t.decimal :A3_price_SI_min, unsigned: true, precision: 3, scale: 2, null: false #1
+      t.decimal :A3_price_SI_max, unsigned: true, precision: 3, scale: 2, null: false #1
+      t.decimal :A4_quality_SI_min, unsigned: true, precision: 3, scale: 2, null: false #0 #sum 1
+      t.decimal :A4_quality_SI_max, unsigned: true, precision: 3, scale: 2, null: false #0 #sum 1
       # 3 apla ypodeiknuei an tha psaksw ston need_prod_char
       # 2 vlepoume an tha psaksw sto subweight2
       # 0 omoiws subweight4
@@ -70,5 +75,6 @@ class CreateCustomers < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
+    add_index :customers, [:version_id, :name], unique: true
   end
 end

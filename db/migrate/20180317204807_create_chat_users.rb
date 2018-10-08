@@ -1,4 +1,6 @@
 class CreateChatUsers < ActiveRecord::Migration[5.0]
+# depreciated, chat only between companies. left in case you want personal chats
+=begin
   def change
     create_table :chat_users do |t|
 
@@ -9,4 +11,5 @@ class CreateChatUsers < ActiveRecord::Migration[5.0]
     end
     add_index :chat_users, [:chat_g_id, :user_id], unique: true
   end
+=end
 end

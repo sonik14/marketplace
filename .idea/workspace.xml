@@ -2,46 +2,99 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="196254a6-6b3f-4acd-972e-c97b4823d5ca" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e7b76a16-15ba-42bc-bc06-a55a56d929a7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e7b76a16-15ba-42bc-bc06-a55a56d929a7.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e7b76a16-15ba-42bc-bc06-a55a56d929a7/storage_v2/_src_/database/marketplace_development.R23Z8g/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e7b76a16-15ba-42bc-bc06-a55a56d929a7/storage_v2/_src_/database/marketplace_development.R23Z8g/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e7b76a16-15ba-42bc-bc06-a55a56d929a7/storage_v2/_src_/database/marketplace_development.R23Z8g/schema/public.abK9xQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e7b76a16-15ba-42bc-bc06-a55a56d929a7/storage_v2/_src_/database/marketplace_development.R23Z8g/schema/public.abK9xQ.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/marketplace.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/marketplace.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/customers.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/customers.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/dashboard.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/dashboard.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/function_usages.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/function_usages.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/games.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/games.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/admin/versions.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/versions.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/active_admin.js.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/active_admin.js.coffee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/active_admin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/active_admin.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/cust_q_funcs.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/admin/cust_q_funcs.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/adv_char.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/adv_char.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/adv_medium.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/adv_medium.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/category_adv.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/category_adv.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/chat_g.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/chat_g.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/chat_line.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/chat_line.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/chat_user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/chat_user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/city.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/city.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/comp_adv.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/comp_adv.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/comp_adv_q.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/comp_adv_q.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/comp_prod.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/comp_prod.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/comp_q.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/comp_q.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/comp_q_cust_city.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/comp_q_cust_city.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/comp_rnd.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/comp_rnd.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/company.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/company.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/continent.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/continent.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/cust_category_adv.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/cust_category_adv.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/cust_category_prod.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/cust_category_prod.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/cust_g.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/cust_g.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/cust_g_func.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/cust_g_func.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/cust_q_func.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/cust_q_func.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/customer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/customer.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/function.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/function.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/function_g.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/function_g.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/function_q.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/function_q.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/function_usage.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/function_usage.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/game.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/game.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/health.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/health.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/mq.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/mq.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/need.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/need.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/prod_char.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/prod_char.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/quarter.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/quarter.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/score.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/score.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/transfer_cost.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/transfer_cost.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/active_admin.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/active_admin.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20180316221245_create_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180316221245_create_users.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/version.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/version.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20180317164945_create_function_usages.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317164945_create_function_usages.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317164946_create_functions.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317164946_create_functions.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317165007_create_healths.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317165007_create_healths.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317165033_create_continents.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317165033_create_continents.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20180317165112_create_cities.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317165112_create_cities.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317165136_create_web_features.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317165136_create_web_features.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317165149_create_web_supplies.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317165149_create_web_supplies.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317165215_create_category_prods.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317165215_create_category_prods.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317165247_create_category_advs.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317165247_create_category_advs.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317165315_create_prod_chars.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317165315_create_prod_chars.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317165332_create_adv_chars.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317165332_create_adv_chars.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317165345_create_adv_media.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317165345_create_adv_media.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317165419_create_customers.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317165419_create_customers.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20180317165708_create_cust_cities.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317165708_create_cust_cities.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317165837_create_cust_category_prods.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317165837_create_cust_category_prods.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317165918_create_cust_category_advs.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317165918_create_cust_category_advs.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317165953_create_cust_adv_media.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317165953_create_cust_adv_media.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317181927_create_scores.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317181927_create_scores.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317182003_create_need_types.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317182003_create_need_types.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317182059_create_needs.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317182059_create_needs.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317182150_create_need_prod_chars.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317182150_create_need_prod_chars.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317202250_create_need_scores.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317202250_create_need_scores.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317202605_create_goals.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317202605_create_goals.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317202631_create_educations.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317202631_create_educations.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317202706_create_factory_capacities.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317202706_create_factory_capacities.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317202751_create_transfer_costs.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317202751_create_transfer_costs.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317202821_create_interests.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317202821_create_interests.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317202852_create_loans.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317202852_create_loans.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317203802_create_financial_statements.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317203802_create_financial_statements.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317203849_create_fin_line_items.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317203849_create_fin_line_items.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317204102_create_months.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317204102_create_months.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20180317204143_create_games.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317204143_create_games.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20180317204216_create_quarters.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317204216_create_quarters.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20180317204217_create_function_gs.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317204217_create_function_gs.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20180317204218_create_function_qs.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317204218_create_function_qs.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317204259_create_funding_qs.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317204259_create_funding_qs.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317204425_create_cust_gs.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317204425_create_cust_gs.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20180317204452_create_cust_g_funcs.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317204452_create_cust_g_funcs.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20180317204453_create_cust_q_funcs.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317204453_create_cust_q_funcs.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20180317204555_create_companies.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317204555_create_companies.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20180317211717_create_comp_qs.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317211717_create_comp_qs.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317204629_create_comp_goals.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317204629_create_comp_goals.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317204713_create_comp_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317204713_create_comp_users.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317204743_create_chat_gs.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317204743_create_chat_gs.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317204807_create_chat_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317204807_create_chat_users.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317205325_create_chat_lines.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317205325_create_chat_lines.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317205811_create_comp_rnds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317205811_create_comp_rnds.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317211725_create_comp_q_priors.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317211725_create_comp_q_priors.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317211732_create_comp_q_searches.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317211732_create_comp_q_searches.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180317212638_create_comp_prod_q_webs.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180317212638_create_comp_prod_q_webs.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180318154329_create_comp_q_cust_cities.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180318154329_create_comp_q_cust_cities.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180320161705_create_comp_prod_q_cust_cities.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180320161705_create_comp_prod_q_cust_cities.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20180320161716_create_comp_prod_mq_cust_cities.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20180320161716_create_comp_prod_mq_cust_cities.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gems/ruby/2.3.0/bin/rubocop.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gems/ruby/2.3.0/bin/rubocop.bat" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -74,23 +127,28 @@
     <session id="-1001727909">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.6" value="2" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.closed" value="12" />
+          <entry key="project.open.time.6" value="6" />
+          <entry key="project.open.time.7" value="4" />
+          <entry key="project.open.time.8" value="3" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="DATABASE/e7b76a16-15ba-42bc-bc06-a55a56d929a7" value="7" />
+          <entry key="RailsDependency/Mq" value="11" />
           <entry key="erb" value="1" />
           <entry key="log" value="1" />
-          <entry key="rb" value="13" />
+          <entry key="rb" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="RHTML" value="1" />
-          <entry key="Ruby" value="13" />
+          <entry key="Ruby" value="16" />
+          <entry key="UML" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -112,8 +170,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/admin/dashboard.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+            <state relative-caret-position="340">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -181,9 +239,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="641" />
-    <option name="y" value="352" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="18" />
+    <option name="y" value="9" />
     <option name="width" value="1209" />
     <option name="height" value="728" />
   </component>
@@ -192,7 +250,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -238,13 +296,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="GoToClass.toSaveIncludeLibraries" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/files" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
   </component>
@@ -288,17 +348,50 @@
       <workItem from="1535557204056" duration="314000" />
       <workItem from="1535557679124" duration="12904000" />
       <workItem from="1537145112050" duration="560000" />
+      <workItem from="1538353239987" duration="2000" />
+      <workItem from="1538353258920" duration="598000" />
+      <workItem from="1538353876574" duration="127000" />
+      <workItem from="1538395536486" duration="279000" />
+      <workItem from="1538396082472" duration="767000" />
+      <workItem from="1538409704316" duration="1282000" />
+      <workItem from="1538411272463" duration="3691000" />
+      <workItem from="1538435523066" duration="1883000" />
+      <workItem from="1538438336254" duration="900000" />
+      <workItem from="1538477769098" duration="2491000" />
+      <workItem from="1538764710713" duration="28000" />
+      <workItem from="1538764766918" duration="599000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59169000" />
+    <option name="totallyTimeSpent" value="71816000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="641" y="352" width="1209" height="728" extended-state="0" />
+    <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6486486" visible="true" weight="0.3402959" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6486486" visible="true" weight="0.2183021" />
+      <window_info id="Favorites" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" weight="0.3298647" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.036420394" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" anchor="right" id="Database" order="3" sideWeight="0.24082074" visible="true" weight="0.20507166" />
+      <window_info anchor="right" x="2822" y="433" width="316" height="295" id="Structure" order="4" sideWeight="0.7591793" side_tool="true" weight="0.2028666" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6486486" visible="true" weight="0.24200661" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -311,13 +404,13 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="11" side_tool="true" visible="true" weight="0.11467116" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" visible="true" weight="0.036420394" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" sideWeight="0.25142857" visible="true" weight="0.3202785" />
-      <window_info anchor="right" x="2822" y="433" width="316" height="295" id="Structure" order="4" sideWeight="0.74857146" side_tool="true" visible="true" weight="0.3202785" />
-    </layout>
+      <window_info active="true" anchor="right" id="Database" order="3" sideWeight="0.24082074" visible="true" weight="0.2028666" />
+      <window_info anchor="right" x="2822" y="433" width="316" height="295" id="Structure" order="4" sideWeight="0.7591793" side_tool="true" visible="true" weight="0.2028666" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -326,16 +419,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/admin/continents.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180317165149_create_web_supplies.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20180317165655_create_cust_funcs.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -568,10 +651,1908 @@
         </state>
       </provider>
     </entry>
+    <entry file="uml://DATABASE/e7b76a16-15ba-42bc-bc06-a55a56d929a7">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>e7b76a16-15ba-42bc-bc06-a55a56d929a7</OriginalElement>
+          <nodes>
+            <node x="102.0" y="476.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_advs</node>
+            <node x="801.0" y="605.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.function_qs</node>
+            <node x="846.0" y="695.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_scores</node>
+            <node x="1108.0" y="200.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_users</node>
+            <node x="952.0" y="553.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.interests</node>
+            <node x="810.0" y="793.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.games</node>
+            <node x="448.0" y="1164.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.category_prods</node>
+            <node x="889.0" y="482.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.health_conts</node>
+            <node x="1227.0" y="701.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_goals</node>
+            <node x="369.0" y="728.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_advs</node>
+            <node x="1248.0" y="370.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.users</node>
+            <node x="521.0" y="667.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_priors</node>
+            <node x="1196.0" y="857.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.fin_line_items</node>
+            <node x="936.0" y="624.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.healths</node>
+            <node x="832.0" y="1251.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.need_types</node>
+            <node x="420.0" y="951.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.customers</node>
+            <node x="669.0" y="809.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_q_funcs</node>
+            <node x="410.0" y="444.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cities</node>
+            <node x="661.0" y="1200.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_funcs</node>
+            <node x="156.0" y="590.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_adv_qs</node>
+            <node x="850.0" y="291.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_searches</node>
+            <node x="374.0" y="1093.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.adv_media</node>
+            <node x="705.0" y="880.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_g_funcs</node>
+            <node x="9.0" y="881.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_adv_q_media</node>
+            <node x="526.0" y="596.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.quarters</node>
+            <node x="571.0" y="1022.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.need_prod_chars</node>
+            <node x="676.0" y="1376.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.needs</node>
+            <node x="0.0" y="405.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_adv_q_cities</node>
+            <node x="600.0" y="0.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_q_stores</node>
+            <node x="780.0" y="1355.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.factory_capacities</node>
+            <node x="672.0" y="627.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.continents</node>
+            <node x="1073.0" y="1174.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.financial_statements</node>
+            <node x="943.0" y="411.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.companies</node>
+            <node x="436.0" y="373.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prods</node>
+            <node x="221.0" y="344.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_q_webs</node>
+            <node x="5.0" y="175.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_mq_cust_cities</node>
+            <node x="871.0" y="908.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.functions</node>
+            <node x="209.0" y="1456.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.ar_internal_metadata</node>
+            <node x="966.0" y="837.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.function_usages</node>
+            <node x="1028.0" y="304.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.loans</node>
+            <node x="756.0" y="1050.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.versions</node>
+            <node x="727.0" y="389.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_chars</node>
+            <node x="76.0" y="1094.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_category_prods</node>
+            <node x="1039.0" y="1018.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.function_gs</node>
+            <node x="598.0" y="738.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.prod_chars</node>
+            <node x="396.0" y="1456.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.schema_migrations</node>
+            <node x="561.0" y="1093.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.adv_chars</node>
+            <node x="1368.0" y="563.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.chat_lines</node>
+            <node x="247.0" y="273.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_g_mq_cities</node>
+            <node x="581.0" y="951.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.web_supplies</node>
+            <node x="422.0" y="195.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_qs</node>
+            <node x="207.0" y="875.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_web_supplies</node>
+            <node x="580.0" y="1305.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.category_advs</node>
+            <node x="954.0" y="766.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.educations</node>
+            <node x="719.0" y="1121.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_gs</node>
+            <node x="260.0" y="93.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_q_cities</node>
+            <node x="966.0" y="1381.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.need_scores</node>
+            <node x="367.0" y="22.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_q_cust_cities</node>
+            <node x="309.0" y="469.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.mqs</node>
+            <node x="390.0" y="586.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_cities</node>
+            <node x="611.0" y="231.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_cust_cities</node>
+            <node x="1069.0" y="617.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_educs</node>
+            <node x="448.0" y="1281.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.need_custs</node>
+            <node x="1449.0" y="246.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.roles</node>
+            <node x="636.0" y="507.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_rnds</node>
+            <node x="1102.0" y="947.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.goals</node>
+            <node x="484.0" y="515.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_webs</node>
+            <node x="296.0" y="1269.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_adv_chars</node>
+            <node x="517.0" y="809.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.months</node>
+            <node x="947.0" y="1094.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.scores</node>
+            <node x="1112.0" y="521.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_fins</node>
+            <node x="1113.0" y="698.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.chat_gs</node>
+            <node x="156.0" y="743.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_custs</node>
+            <node x="222.0" y="1198.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_adv_media</node>
+            <node x="828.0" y="168.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_loans</node>
+            <node x="327.0" y="804.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_adv_custs</node>
+            <node x="0.0" y="1456.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.active_admin_comments</node>
+            <node x="429.0" y="880.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_prod_chars</node>
+            <node x="538.0" y="302.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_stores</node>
+            <node x="283.0" y="1022.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_adv_chars</node>
+            <node x="830.0" y="979.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.transfer_costs</node>
+            <node x="768.0" y="496.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_qs</node>
+            <node x="301.0" y="657.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_store_custs</node>
+            <node x="857.0" y="1171.0">e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.web_features</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_adv_media" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.customers">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_rnds" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.prod_chars">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cities" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.continents">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_stores" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_qs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_q_funcs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.customers">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.web_supplies" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.web_features">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_web_supplies" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_webs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_prod_chars" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.customers">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_cust_cities" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_cities">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.games" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.versions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_adv_custs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.customers">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_cust_cities" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.companies">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_qs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.healths">
+              <point x="-8.095744354916121" y="0.0" />
+              <point x="-8.095744354916121" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_users" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.companies">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.web_features" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.versions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_store_custs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.customers">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.continents" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.versions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.financial_statements" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.versions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_q_funcs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.function_usages">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_adv_q_cities" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cities">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_qs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.quarters">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.customers" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.versions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_q_funcs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_funcs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_adv_qs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_advs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_rnds" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.companies">
+              <point x="0.0" y="4.715568065688217" />
+              <point x="0.0" y="4.71556806568816" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.goals" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.versions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.category_prods" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.versions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.need_prod_chars" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.prod_chars">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.health_conts" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.healths">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_g_funcs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.functions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.need_types" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.versions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_priors" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_qs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_custs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.customers">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_store_custs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_stores">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_g_funcs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_funcs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_g_funcs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.games">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_g_mq_cities" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_cities">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.companies" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.games">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_category_prods" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.customers">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.factory_capacities" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.versions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_adv_media" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.adv_media">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.months" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.versions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.educations" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.versions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.mqs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.quarters">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_educs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.educations">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_q_cities" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cities">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.web_supplies" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.continents">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.need_scores" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.scores">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.chat_gs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.companies">
+              <point x="5.733004523679597" y="0.0" />
+              <point x="5.733004523679654" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_adv_q_media" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.adv_media">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_adv_q_cities" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_adv_qs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_g_funcs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.function_usages">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.function_qs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.quarters">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.companies" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.users">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.function_qs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.functions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.healths" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.versions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_g_funcs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.customers">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.function_gs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.function_usages">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.fin_line_items" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.functions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.transfer_costs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.continents">
+              <point x="5.5281054293880345" y="0.0" />
+              <point x="5.528105429388045" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_adv_chars" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.customers">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_q_cust_cities" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_cust_cities">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_advs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_qs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.continents" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.healths">
+              <point x="0.0" y="4.500311407910118" />
+              <point x="0.0" y="4.500311407910118" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_q_cust_cities" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prods">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_cities" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cities">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_category_prods" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.category_prods">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_q_funcs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.quarters">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_mq_cust_cities" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.mqs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_adv_custs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_advs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_educs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_qs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_funcs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.customers">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_qs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prods">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.companies" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.continents">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.transfer_costs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.functions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.needs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.need_types">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_advs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prods">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_stores" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cities">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_loans" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_qs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_goals" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.companies">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prods" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.quarters">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.function_gs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.games">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_gs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.customers">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_funcs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.functions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_q_webs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_qs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_q_cities" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_qs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_qs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.companies">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.chat_gs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.games">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_q_webs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_webs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_adv_custs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prods">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.quarters" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.games">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_cities" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.customers">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_custs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prods">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.function_usages" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.versions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.adv_chars" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.category_advs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.category_advs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.versions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_advs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.quarters">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_cust_cities" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.quarters">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_webs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_qs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_prod_chars" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.prod_chars">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.prod_chars" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.category_prods">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_adv_chars" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.adv_chars">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_webs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.continents">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_fins" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_qs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.health_conts" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.continents">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_q_stores" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_stores">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_adv_qs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.quarters">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_adv_chars" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_advs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_q_funcs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.functions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_loans" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.loans">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_advs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_advs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_g_mq_cities" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.mqs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.function_gs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.functions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_searches" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_qs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_q_stores" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_qs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_users" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.users">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.need_custs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.needs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_priors" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.customers">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.fin_line_items" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.financial_statements">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_qs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.quarters">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_goals" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.goals">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prods" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_qs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.mqs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.months">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_chars" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.prod_chars">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.scores" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.versions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.interests" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.functions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.adv_media" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.versions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.function_qs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.function_usages">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.users" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.roles">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.games" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.months">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.chat_lines" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.chat_gs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.scores" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.functions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.chat_lines" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.users">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_searches" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.continents">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_scores" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.scores">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.need_scores" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.needs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_adv_q_media" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_adv_qs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_adv_chars" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.adv_chars">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.cust_gs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.games">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_fins" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.fin_line_items">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_rnds" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.quarters">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.adv_chars" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.prod_chars">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.adv_chars" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.functions">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_web_supplies" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.web_supplies">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.need_custs" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.customers">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.loans" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.interests">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.need_prod_chars" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.needs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_q_scores" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_qs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.functions" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.function_usages">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_mq_cust_cities" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_q_cust_cities">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_prod_chars" target="e7b76a16-15ba-42bc-bc06-a55a56d929a7.TABLE:marketplace_development.public.comp_qs">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="627.0" y="656.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://RailsDependency/Mq">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>RailsDependency</ID>
+          <OriginalElement>Mq</OriginalElement>
+          <nodes>
+            <node x="52.38067759685828" y="2087.169426205941">Quarter</node>
+            <node x="3190.111156873142" y="938.5808596877816">CompQScore</node>
+            <node x="393.69218324322947" y="615.6372093539994">ProdChar</node>
+            <node x="107.11659069321581" y="1114.5160250171534">Function</node>
+            <node x="2842.011348090487" y="2916.46546448869">CompProdQCity</node>
+            <node x="791.5804309831685" y="3128.721509753492">NeedType</node>
+            <node x="189.9462739309265" y="916.0402913663612">NeedScore</node>
+            <node x="2413.778494155008" y="169.2187525486438">CustCity</node>
+            <node x="2713.168934379835" y="357.18238708989907">CompAdvQ</node>
+            <node x="3011.7520296780735" y="648.782634750635">CompProd</node>
+            <node x="552.5803444708297" y="447.6762652679722">CompRnd</node>
+            <node x="3165.3055941664043" y="2544.020876164477">Loan</node>
+            <node x="2285.8711185619577" y="120.18916392974938">CustGMqCity</node>
+            <node x="2361.930697184336" y="3244.413698776009">CompQPrior</node>
+            <node x="0.0" y="1611.982276001188">CustGFunc</node>
+            <node x="2134.9959016623843" y="3324.3144879194047">CustProdChar</node>
+            <node x="2814.1999171551274" y="437.10748121251186">CompAdv</node>
+            <node x="2270.6989780498498" y="3287.725522325185">CustG</node>
+            <node x="3950.5396359835527" y="571.9765982336589">FundingQ</node>
+            <node x="185.41662752541606" y="2529.5402886871916">CompProdMqCustCity</node>
+            <node x="2006.7585763284974" y="36.04504707868887">Game</node>
+            <node x="3055.9634393130373" y="2711.6168769363376">Role</node>
+            <node x="109.17831991518733" y="2367.081513958647">CompProdQCustCity</node>
+            <node x="4090.236555142694" y="912.2551378705616">CustCategoryAdv</node>
+            <node x="1155.427811150308" y="3300.721212360669">CompUser</node>
+            <node x="2002.5025913133777" y="3356.121865427734">CustAdvChar</node>
+            <node x="3289.7028362953934" y="1231.751613035967">FinancialStatement</node>
+            <node x="1.7026031680668439" y="1477.6457429362">FunctionUsage</node>
+            <node x="759.5093206068932" y="291.9210920248597">Version</node>
+            <node x="852.0645539749469" y="238.78461830194306">Goal</node>
+            <node x="1561.3160141789447" y="3383.5895936261722">CustCategoryProd</node>
+            <node x="1166.3915454052142" y="83.43450110262233">CompQWebSupply</node>
+            <node x="1417.5607068811737" y="3366.9444473723515">CompProdAdv</node>
+            <node x="2516.480853624873" y="215.33831977553587">City</node>
+            <node x="4039.3463342838654" y="769.0975110932383">CompProdCharCust</node>
+            <node x="3198.4310794438206" y="2442.748235402286">CompQLoan</node>
+            <node x="3993.580165276125" y="663.0939503066488">ChatUser</node>
+            <node x="2104.002373894387" y="57.54849929497982">Month</node>
+            <node x="3365.134305990315" y="1500.3659768590994">CompQFin</node>
+            <node x="3359.7044525438337" y="1640.178069992395">CustAdvMedium</node>
+            <node x="2588.429884213474" y="276.80759052925555">CompAdvQCity</node>
+            <node x="19.872963994039537" y="1972.570771318267">CustQFunc</node>
+            <node x="1272.5165263756978" y="3338.23967425236">CompProdCust</node>
+            <node x="3898.7244861121403" y="472.3163587962108">RndContract</node>
+            <node x="155.889791599604" y="1016.0195114362145">Score</node>
+            <node x="3089.351815283991" y="743.2468558561097">CompQ</node>
+            <node x="930.6939676279977" y="185.72333397073498">WebFeature</node>
+            <node x="298.8652215180921" y="2662.242981817456">HealthCont</node>
+            <node x="3334.7246158882244" y="1936.2605804041948">CompAdvQMedium</node>
+            <node x="3343.632498386738" y="1375.135349769782">FinLineItem</node>
+            <node x="1868.7460238062386" y="3376.5657198091817">CategoryAdv</node>
+            <node x="1906.2556266156455" y="20.7688271226275">ChatG</node>
+            <node x="63.80881636025606" y="2212.7311637525345">CompQCustCity</node>
+            <node x="3335.228040732822" y="2080.366081574862">Education</node>
+            <node x="258.72758059224066" y="819.8130484518597">Need</node>
+            <node x="3150.2662205596966" y="833.0785515816033">Health</node>
+            <node x="1460.2703524535486" y="23.75974442979532">Continent</node>
+            <node x="4131.349790681612" y="1052.4611152381838">CompAdvCharCust</node>
+            <node x="1791.6699438268213" y="10.999124008633771">ChatLine</node>
+            <node x="3238.090270008196" y="1075.7304941695613">ApplicationRecord</node>
+            <node x="1700.1494211996978" y="8.107232746795034">User</node>
+            <node x="1029.9123319649261" y="3255.7096425951177">TransferCost</node>
+            <node x="1048.971578536718" y="132.9092526978834">WebSupply</node>
+            <node x="894.1582249528695" y="3195.7945565169375">CompProdChar</node>
+            <node x="2721.156155669548" y="3019.511873700725">CompProdQStore</node>
+            <node x="299.9774091807599" y="719.1301438239344">NeedProdChar</node>
+            <node x="2205.789996162257" y="83.33271795252972">Mq</node>
+            <node x="66.22088497693676" y="1226.853891781163">FunctionG</node>
+            <node x="1579.8051324338967" y="11.715308719584073">Company</node>
+            <node x="451.4081864993782" y="2859.5134178767485">CompQSearch</node>
+            <node x="555.2078754539793" y="2956.506717418554">CompQStore</node>
+            <node x="642.6361013695778" y="363.9074089719584">CategoryProd</node>
+            <node x="35.886040496832265" y="1345.6377001972821">FunctionQ</node>
+            <node x="2481.873178382294" y="3185.99895323968">CompProdQ</node>
+            <node x="3294.247261136351" y="2203.1230214157395">CompQEduc</node>
+            <node x="656.8425681726367" y="3049.6165716119062">CompQStoreCust</node>
+            <node x="377.5026771279695" y="2760.92762779069">NeedCust</node>
+            <node x="3256.4214263161166" y="2324.767882488821">CompGoal</node>
+            <node x="2594.5494334988243" y="3112.0032672012667">CompProdQWeb</node>
+            <node x="3370.453516533885" y="1784.1907007127486">AdvMedium</node>
+            <node x="2893.391140869769" y="537.9533498111002">CompProdAdvCust</node>
+            <node x="1329.3849139635413" y="45.5779346528459">CompQWeb</node>
+            <node x="1.2262865145248725" y="1733.975225118786">Customer</node>
+            <node x="472.5911727665068" y="529.5649760825552">AdvChar</node>
+            <node x="3105.512885353188" y="2630.020635671006">Interest</node>
+            <node x="2948.4591470809746" y="2806.251995734754">FactoryCapacity</node>
+            <node x="1723.9518533257926" y="3386.286579182567">CompAdvChar</node>
+            <node x="8.911929187341912" y="1852.017872776019">CustFunc</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="Customer" target="CustAdvMedium">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="ProdChar" target="CompProdChar">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompGoal" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompAdvChar" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Need" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Loan" target="Interest">
+              <point x="5.882195057077297" y="-1.1368683772161603E-13" />
+              <point x="5.882195057077524" y="0.0" />
+            </edge>
+            <edge source="Continent" target="TransferCost">
+              <point x="10.085428982265682" y="0.0" />
+              <point x="10.08542898226574" y="0.0" />
+            </edge>
+            <edge source="Game" target="Month">
+              <point x="0.0" y="-4.603387156857934" />
+              <point x="0.0" y="-4.603387156857934" />
+            </edge>
+            <edge source="Game" target="ChatG">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Continent" target="Company">
+              <point x="0.0" y="-4.52297737054414" />
+              <point x="0.0" y="-4.522977370543913" />
+            </edge>
+            <edge source="Company" target="CompGoal">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="AdvChar" target="CustAdvChar">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Version" target="AdvMedium">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQEduc" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Game" target="CustGFunc">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CustQFunc" target="FunctionUsage">
+              <point x="-4.999318830971561" y="0.08253015384298124" />
+              <point x="-4.999318830971561" y="0.08253015384298124" />
+            </edge>
+            <edge source="Continent" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQ" target="CompQStore">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompAdvQMedium" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CustFunc" target="CustQFunc">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompProdQ" target="CompProdQStore">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="ChatG" target="ChatLine">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Goal" target="CompGoal">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="WebFeature" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Function" target="CustFunc">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQ" target="CompQEduc">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompAdv" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompProd" target="CompProdCust">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompProdQCustCity" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQCustCity" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="City" target="Continent">
+              <point x="0.0" y="4.575682789455868" />
+              <point x="0.0" y="4.575682789455868" />
+            </edge>
+            <edge source="Role" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CategoryProd" target="CustCategoryProd">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQWebSupply" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="NeedScore" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Customer" target="CompQStoreCust">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Quarter" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="ChatUser" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQSearch" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Function" target="FunctionQ">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompProd" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="FactoryCapacity" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQ" target="CompQFin">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQWeb" target="CompQWebSupply">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Quarter" target="CustQFunc">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="FundingQ" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Need" target="NeedProdChar">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="ProdChar" target="NeedProdChar">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Game" target="FunctionG">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQScore" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompAdvQ" target="CompAdvQMedium">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CustFunc" target="CustGFunc">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="AdvMedium" target="CustAdvMedium">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Month" target="Game">
+              <point x="-0.9483525468195921" y="4.398934808216836" />
+              <point x="-0.9483525468195921" y="4.398934808216836" />
+            </edge>
+            <edge source="City" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Customer" target="CustGFunc">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Version" target="CategoryAdv">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Function" target="CustGFunc">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Customer" target="CustCategoryProd">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CustAdvMedium" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQFin" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="FunctionG" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="ChatG" target="Company">
+              <point x="0.0" y="7.5030591066454235" />
+              <point x="-1.4210854715202004E-14" y="7.503059106645651" />
+            </edge>
+            <edge source="Function" target="FunctionG">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Version" target="Education">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompRnd" target="Company">
+              <point x="-20.460336102181373" y="-2.2737367544323206E-13" />
+              <point x="-20.46033610218089" y="0.0" />
+            </edge>
+            <edge source="Customer" target="CompQPrior">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CategoryProd" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="NeedType" target="Need">
+              <point x="-5.1378265504139335" y="0.0" />
+              <point x="-5.13782655041382" y="0.0" />
+            </edge>
+            <edge source="CompQ" target="Health">
+              <point x="5.933993280056939" y="0.0" />
+              <point x="5.933993280056939" y="-1.1368683772161603E-13" />
+            </edge>
+            <edge source="CompUser" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="HealthCont" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompProdChar" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQLoan" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQ" target="CompQWeb">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="FinLineItem" target="CompQFin">
+              <point x="4.940453524415716" y="-0.76936270580876" />
+              <point x="4.940453524415716" y="-0.76936270580876" />
+            </edge>
+            <edge source="Game" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompProdAdvCust" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Mq" target="CompProdMqCustCity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Interest" target="Loan">
+              <point x="-4.250114074323619" y="-2.6337293625650773" />
+              <point x="-4.250114074323619" y="-2.6337293625650773" />
+            </edge>
+            <edge source="Health" target="CompQ">
+              <point x="-17.801979840171043" y="-1.1368683772161603E-13" />
+              <point x="-17.801979840171043" y="0.0" />
+            </edge>
+            <edge source="WebFeature" target="WebSupply">
+              <point x="-12.133627190062043" y="0.0" />
+              <point x="-12.13362719006193" y="0.0" />
+            </edge>
+            <edge source="Function" target="TransferCost">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Customer" target="CustG">
+              <point x="2.8330933305624058" y="-4.119900748843662" />
+              <point x="2.8330933305624058" y="-4.119900748843747" />
+            </edge>
+            <edge source="Health" target="Continent">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQWeb" target="CompProdQWeb">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CategoryProd" target="ProdChar">
+              <point x="3.474877462720542" y="3.5951671197703945" />
+              <point x="3.474877462720542" y="3.5951671197703945" />
+            </edge>
+            <edge source="Continent" target="Health">
+              <point x="16.136689831316176" y="0.0" />
+              <point x="16.136689831315607" y="0.0" />
+            </edge>
+            <edge source="Function" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CategoryAdv" target="AdvChar">
+              <point x="-5.577780221241397" y="0.0" />
+              <point x="-5.577780221241255" y="0.0" />
+            </edge>
+            <edge source="AdvMedium" target="CompAdvQMedium">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompRnd" target="ProdChar">
+              <point x="3.61074002188775" y="3.4586928881208223" />
+              <point x="3.61074002188775" y="3.4586928881208223" />
+            </edge>
+            <edge source="CompProdQWeb" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Game" target="Quarter">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="NeedType" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Quarter" target="CompAdv">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CustCity" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Game" target="Version">
+              <point x="0.0" y="4.594318677324509" />
+              <point x="-1.1368683772161603E-13" y="4.5943186773242815" />
+            </edge>
+            <edge source="Continent" target="CompQWeb">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Quarter" target="CompQCustCity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Quarter" target="CompQ">
+              <point x="-11.123263802352085" y="0.0" />
+              <point x="-11.123263802352085" y="1.1368683772161603E-13" />
+            </edge>
+            <edge source="CompQStore" target="CompQStoreCust">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Function" target="Score">
+              <point x="-5.392255954862094" y="0.0" />
+              <point x="-5.3922559548618665" y="-1.1368683772161603E-13" />
+            </edge>
+            <edge source="CompQ" target="CompProdChar">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Loan" target="CompQLoan">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Customer" target="CustQFunc">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQFin" target="FinLineItem">
+              <point x="-5.060264179482829" y="0.0" />
+              <point x="-5.060264179483056" y="0.0" />
+            </edge>
+            <edge source="Score" target="Function">
+              <point x="4.636278435087888" y="1.8721437638010912" />
+              <point x="4.636278435087888" y="1.8721437638010912" />
+            </edge>
+            <edge source="CustCity" target="CompQCustCity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Function" target="Interest">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQ" target="CompQSearch">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CustG" target="Customer">
+              <point x="-8.824276888554323" y="0.0" />
+              <point x="-8.824276888554323" y="0.0" />
+            </edge>
+            <edge source="AdvChar" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQ" target="CompQLoan">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Score" target="CompQScore">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="WebSupply" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQ" target="CompAdv">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Quarter" target="FunctionQ">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="NeedProdChar" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Continent" target="CompQSearch">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Company" target="CompRnd">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Continent" target="WebSupply">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="FunctionUsage" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Role" target="User">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompAdvCharCust" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="RndContract" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Month" target="Mq">
+              <point x="0.0" y="-4.670513678597899" />
+              <point x="0.0" y="-4.670513678597899" />
+            </edge>
+            <edge source="Version" target="Goal">
+              <point x="-8.493231385368176" y="-2.2737367544323206E-13" />
+              <point x="-8.493231385368745" y="0.0" />
+            </edge>
+            <edge source="CompQ" target="CompProd">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="ChatG" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CustFunc" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Education" target="CompQEduc">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="FunctionQ" target="FunctionUsage">
+              <point x="4.927778382595079" y="0.846758650400659" />
+              <point x="4.927778382595079" y="0.8467586504006874" />
+            </edge>
+            <edge source="Need" target="NeedScore">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="ProdChar" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Version" target="Health">
+              <point x="-1.1368683772161603E-13" y="-4.614029698944023" />
+              <point x="0.0" y="-4.614029698943909" />
+            </edge>
+            <edge source="ProdChar" target="CustProdChar">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompAdv" target="CompAdvChar">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CustGFunc" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Company" target="ChatG">
+              <point x="-1.4210854715202004E-14" y="-7.503059106645651" />
+              <point x="0.0" y="-7.5030591066454235" />
+            </edge>
+            <edge source="Function" target="FinLineItem">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Company" target="CompUser">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompProd" target="CompProdQCustCity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Customer" target="CustFunc">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Version" target="Score">
+              <point x="6.531605136036546" y="0.0" />
+              <point x="6.531605136036205" y="0.0" />
+            </edge>
+            <edge source="Continent" target="HealthCont">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Need" target="NeedType">
+              <point x="4.8658707635793235" y="-1.1503485176871209" />
+              <point x="4.86587076357921" y="-1.1503485176872346" />
+            </edge>
+            <edge source="Mq" target="CustGMqCity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="ProdChar" target="CategoryProd">
+              <point x="-7.19449830050371" y="0.0" />
+              <point x="-7.194498300503938" y="0.0" />
+            </edge>
+            <edge source="Loan" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Interest" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompAdv" target="CompProdAdv">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="ProdChar" target="AdvChar">
+              <point x="-6.704860640463039" y="0.0" />
+              <point x="-6.704860640462812" y="0.0" />
+            </edge>
+            <edge source="User" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Customer" target="NeedCust">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="FinLineItem" target="FinancialStatement">
+              <point x="-4.861801319189226" y="1.1674279132903962" />
+              <point x="-4.861801319189226" y="1.1674279132903962" />
+            </edge>
+            <edge source="AdvChar" target="Function">
+              <point x="4.242010468797389" y="2.6467616406871457" />
+              <point x="4.242010468797389" y="2.6467616406872594" />
+            </edge>
+            <edge source="CompQ" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="User" target="Company">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Customer" target="CustAdvChar">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Customer" target="CompProdCust">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Quarter" target="CompProdQ">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQ" target="Company">
+              <point x="-11.434648247189443" y="1.1368683772161603E-13" />
+              <point x="-11.434648247189116" y="0.0" />
+            </edge>
+            <edge source="Score" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CustCity" target="CustGMqCity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompProd" target="CompProdQ">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Function" target="FunctionUsage">
+              <point x="5.149344541763412" y="0.0" />
+              <point x="5.149344541763412" y="0.0" />
+            </edge>
+            <edge source="CompQStore" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="AdvMedium" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="TransferCost" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CustAdvChar" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompProdCust" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="FunctionUsage" target="FunctionQ">
+              <point x="-5.073280098857367" y="0.0" />
+              <point x="-5.073280098857367" y="0.0" />
+            </edge>
+            <edge source="AdvChar" target="CategoryAdv">
+              <point x="4.482069749681841" y="-2.216089068378551" />
+              <point x="4.4820697496818696" y="-2.216089068378551" />
+            </edge>
+            <edge source="Customer" target="CustCity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="FinancialStatement" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="FunctionQ" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompProd" target="CompProdAdv">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQStoreCust" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="FunctionUsage" target="FunctionG">
+              <point x="-5.108454956569631" y="0.0" />
+              <point x="-5.108454956569631" y="0.0" />
+            </edge>
+            <edge source="Version" target="Continent">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="FunctionUsage" target="CustQFunc">
+              <point x="5.000681261839418" y="0.0" />
+              <point x="5.000681261839418" y="0.0" />
+            </edge>
+            <edge source="CompProdCharCust" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Customer" target="CompProdAdvCust">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CustCategoryProd" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="AdvChar" target="ProdChar">
+              <point x="3.7286382731249432" y="3.3312545126705118" />
+              <point x="3.7286382731249432" y="3.3312545126705118" />
+            </edge>
+            <edge source="CompProdMqCustCity" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Mq" target="Quarter">
+              <point x="3.4154650737081056" y="3.651656929433557" />
+              <point x="3.415465073707992" y="3.651656929433557" />
+            </edge>
+            <edge source="Quarter" target="CompAdvQ">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="FunctionUsage" target="CustGFunc">
+              <point x="4.979498802072385" y="0.452318118319738" />
+              <point x="4.979498802072385" y="0.452318118319738" />
+            </edge>
+            <edge source="CompAdv" target="CompAdvQ">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Version" target="Month">
+              <point x="0.0" y="-4.568010991452866" />
+              <point x="0.0" y="-4.568010991452866" />
+            </edge>
+            <edge source="Company" target="Continent">
+              <point x="0.4530156410530708" y="4.47713935777756" />
+              <point x="0.4530156410530708" y="4.47713935777756" />
+            </edge>
+            <edge source="Function" target="AdvChar">
+              <point x="-5.893431943152791" y="0.0" />
+              <point x="-5.893431943153018" y="0.0" />
+            </edge>
+            <edge source="Health" target="HealthCont">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompAdvQCity" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Version" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQStore" target="CompProdQStore">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="City" target="CompAdvQCity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="FunctionUsage" target="Function">
+              <point x="-4.854986842934977" y="-1.1954508584332473" />
+              <point x="-4.854986842934977" y="-1.1954508584332189" />
+            </edge>
+            <edge source="User" target="ChatLine">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Version" target="CategoryProd">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompProdQ" target="CompProdQCity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Health" target="Version">
+              <point x="-0.9942516874696139" y="4.388788395669621" />
+              <point x="-0.9942516874696139" y="4.388788395669508" />
+            </edge>
+            <edge source="CompProdAdv" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CustProdChar" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Mq" target="Month">
+              <point x="-1.2048259385549613" y="4.335711528432739" />
+              <point x="-1.2048259385549613" y="4.335711528432739" />
+            </edge>
+            <edge source="Mq" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="TransferCost" target="Continent">
+              <point x="-10.085428982265626" y="0.0" />
+              <point x="-10.08542898226574" y="0.0" />
+            </edge>
+            <edge source="Health" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQ" target="Quarter">
+              <point x="1.8205088326430996" y="4.115306500161182" />
+              <point x="1.8205088326430996" y="4.115306500161182" />
+            </edge>
+            <edge source="AdvChar" target="CompAdvChar">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Game" target="Company">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Score" target="NeedScore">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Goal" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompRnd" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompProdQStore" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompProdQ" target="CompProdQWeb">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQWeb" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Quarter" target="CompProd">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQCustCity" target="CompProdQCustCity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="FunctionG" target="FunctionUsage">
+              <point x="4.893847594339377" y="1.0248198492314486" />
+              <point x="4.893847594339377" y="1.0248198492314202" />
+            </edge>
+            <edge source="City" target="CustCity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Game" target="CustG">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="City" target="CompProdQCity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Month" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Version" target="NeedType">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="NeedCust" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Company" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Goal" target="Version">
+              <point x="2.3842515388059837" y="3.8164570742642354" />
+              <point x="2.3842515388059837" y="3.8164570742642354" />
+            </edge>
+            <edge source="CustCategoryAdv" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="City" target="CompQStore">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="ChatLine" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompAdv" target="CompProdAdvCust">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Quarter" target="CompRnd">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Month" target="Version">
+              <point x="0.773625801178639" y="4.433001592572509" />
+              <point x="0.7736258011786958" y="4.433001592572509" />
+            </edge>
+            <edge source="Company" target="CompQ">
+              <point x="2.1863374770749573" y="-4.496657473761843" />
+              <point x="2.186337477074858" y="-4.496657473761729" />
+            </edge>
+            <edge source="CompProdQ" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="WebSupply" target="CompQWebSupply">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Company" target="CompQCustCity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompProdQCity" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Version" target="Customer">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Quarter" target="Mq">
+              <point x="-7.319647386368388" y="0.0" />
+              <point x="-7.319647386368388" y="0.0" />
+            </edge>
+            <edge source="CustG" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Version" target="FinancialStatement">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="ProdChar" target="CompRnd">
+              <point x="-6.92378843352185" y="0.0" />
+              <point x="-6.923788433521622" y="0.0" />
+            </edge>
+            <edge source="Version" target="FactoryCapacity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Customer" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CustQFunc" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Version" target="FunctionUsage">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompProd" target="CompProdAdvCust">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CategoryAdv" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Need" target="NeedCust">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Customer" target="CustProdChar">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompAdvQ" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Education" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CustGFunc" target="FunctionUsage">
+              <point x="-5.0205856038355705" y="0.0" />
+              <point x="-5.0205856038355705" y="0.0" />
+            </edge>
+            <edge source="CompQ" target="CompQPrior">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CustGMqCity" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="FinLineItem" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQPrior" target="ApplicationRecord">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Version" target="WebFeature">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="WebSupply" target="WebFeature">
+              <point x="2.0603896599425298" y="4.555743018345311" />
+              <point x="2.0603896599425298" y="4.555743018345311" />
+            </edge>
+            <edge source="FinancialStatement" target="FinLineItem">
+              <point x="5.142127034547229" y="0.0" />
+              <point x="5.142127034547002" y="0.0" />
+            </edge>
+            <edge source="Version" target="Game">
+              <point x="-0.9071421210254584" y="-4.407617629997048" />
+              <point x="-0.9071421210255153" y="-4.407617629997048" />
+            </edge>
+            <edge source="Score" target="Version">
+              <point x="-3.827543073917468" y="-3.2171282251887305" />
+              <point x="-3.8275430739175818" y="-3.217128225188617" />
+            </edge>
+            <edge source="Function" target="CustQFunc">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="Continent" target="City">
+              <point x="0.8150698412097199" y="-4.4255690203576705" />
+              <point x="0.8150698412097199" y="-4.4255690203576705" />
+            </edge>
+            <edge source="CompAdvQ" target="CompAdvQCity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompProdQCustCity" target="CompProdMqCustCity">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="CompQ" target="CompQScore">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="User" target="CompUser">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="821.0" y="434.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin/dashboard.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>

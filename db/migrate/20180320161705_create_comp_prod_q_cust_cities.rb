@@ -9,8 +9,9 @@ class CreateCompProdQCustCities < ActiveRecord::Migration[5.0]
       t.integer :noB, unsigned: true #no of buys
       t.integer :noNotBbutAvail, unsigned: true #no of demands, but did not procceed into buys for unexpected reasons
       t.integer :noIll, unsigned: true #no of lost demand because of CURRENT shortage of stock
-      t.integer :noRebuys, unsigned: true
-      #how many of customers of that city who bought that product at the current quarter will rebuy in the future,
+      t.integer :noRebuysPositive, unsigned: true #rebuys that will occur with positive opinion
+      t.integer :noRebuysNegative, unsigned: true #rebuys that will occur with negative opinion
+      #how many of customers of that city who bought that product at the current quarter will rebuy depending on results of previous simulations,
       #hence if the product is rated as good quality => prefer that company, otherwise=> avoid it
       #(influence in product rating for that amount of customers)
       t.timestamps

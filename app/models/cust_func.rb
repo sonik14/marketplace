@@ -4,4 +4,6 @@ class CustFunc < ApplicationRecord
 
   has_many :cust_g_funcs
   has_many :cust_q_funcs
+
+  validates :function, uniqueness: {scope: :customer}, presence: true
 end

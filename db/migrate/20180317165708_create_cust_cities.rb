@@ -4,6 +4,7 @@ class CreateCustCities < ActiveRecord::Migration[5.0]
 
       t.belongs_to :city, foreign_key: true, null: false
       t.belongs_to :customer, foreign_key: true, null: false
+
       t.string     :name
       t.integer    :price, unsigned: true #willing
       t.integer    :EducationEC, unsigned: true #education of employees

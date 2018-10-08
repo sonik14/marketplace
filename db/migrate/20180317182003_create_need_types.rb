@@ -4,8 +4,9 @@ class CreateNeedTypes < ActiveRecord::Migration[5.0]
 
       t.belongs_to :version, foreign_key: true, null: false
 
-      t.string :name, unique: true, index: true, null: false
+      t.string :name, index: true, null: false
       t.timestamps
     end
+    add_index :need_types, [:version_id, :name], unique: true
   end
 end

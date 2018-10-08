@@ -4,4 +4,6 @@ class CompQStore < ApplicationRecord
 
   has_many :comp_q_store_custs
   has_many :comp_prod_q_stores
+
+  validates :city, uniqueness: {scope: :comp_q}, presence: true
 end

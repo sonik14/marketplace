@@ -31,13 +31,13 @@ has_many :transfer_costs (fixedPars: true)
 
 if (fixedPars: false)
 	if (differentEachCust: false and differentEachQ: false)
-		function_g
+		assign function_g
 	else if (differentEachCust: true and differentEachQ: false)
-		cust_g_func
+		assign cust_g_func
 	else if (differentEachCust: true and differentEachQ: true)
-		cust_q_func
+		assign cust_q_func
 	else
-		function_q
+		assign function_q
 else
 	only in functions or foreign keys to other tables (same for each game)
 

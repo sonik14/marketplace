@@ -4,6 +4,7 @@ class CreateCustAdvMedia < ActiveRecord::Migration[5.0]
 
       t.belongs_to :adv_medium, foreign_key: true, null: false
       t.belongs_to :customer, foreign_key: true, null: false
+
       t.decimal    :shareRmin, unsigned: true, precision: 5, scale: 4
       t.decimal    :shareRmax, unsigned: true, precision: 5, scale: 4
       # Diavathmisi gia kathe typo katanalwth se decimal.

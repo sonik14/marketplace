@@ -5,6 +5,8 @@ class CustCity < ApplicationRecord
   has_many :cust_g_mq_cities
   has_many :comp_q_cust_cities
 
+  validates :city, uniqueness: {scope: :customer}, presence: true
+
   before_save :cust_city_name
 
   private

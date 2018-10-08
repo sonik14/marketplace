@@ -2,7 +2,7 @@ ActiveAdmin.register Company do
   permit_params :game_id, :ceo_id, :continent_id #view name
   before_filter :ensure_admin!
 
-  actions :all, :except => [:update, :edit]
+  actions :all, except: [:update, :edit, :delete, :destroy]
 
   filter :game
   filter :ceo, as: :select, collection: User.where(role_id: Role.select("id").where(name: "ceo").take).collect {|user| [user.name, user.id]}

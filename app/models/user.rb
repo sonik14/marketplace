@@ -6,10 +6,11 @@ class User < ApplicationRecord
 
   belongs_to :role
 
-  has_many :companies
+  has_many :ceos, class_name: 'Company', foreign_key: 'ceo_id'
   has_many :comp_users
-  has_many :ceos, class_name: 'CompUser', foreign_key: 'ceo_id'
-  has_many :chat_users
+  has_many :chat_lines
+
+#  has_many :chat_users
 
   validates :role, presence: true
   validates :username, presence: false, allow_nil: true, uniqueness: true

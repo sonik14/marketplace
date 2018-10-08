@@ -5,11 +5,12 @@ class CreateCompRnds < ActiveRecord::Migration[5.0]
 	    t.integer :seller_id # provider
       t.integer :buyer_id
       t.integer :prod_id
-      t.belongs_to :quarter, foreign_key: true
-      t.integer :quarter_o_id # obtained
+      t.belongs_to :quarter, foreign_key: true, null: false
+      t.integer :quarter_o_no # obtained or planned to be obtained
+      # while it is planned quarter table has not been created yet. that's why not foreign key
       # provider-> if null => system
       # quarter -> null (contract brake)
-      # quarter_o_id <= current Quarter => company possess the RnD
+      # if quarter_o_no <= current Quarter.no => company possess the RnD
       t.integer :quarterM, unsigned: true, limit: 1, default: 255 #max obtained
       t.integer :price, unsigned: true #price paid by buyer_id (per quarter otan agora apo systhma, alliws efapaks metaksu epixeirhsewn)
       t.integer :advancePayment, unsigned: true, default: 0 #instant payment without guarantees after both have signed
@@ -28,9 +29,8 @@ class CreateCompRnds < ActiveRecord::Migration[5.0]
     add_foreign_key :comp_rnds, :companies, column: :seller_id
     add_foreign_key :comp_rnds, :companies, column: :buyer_id, null: false
     add_foreign_key :comp_rnds, :prod_chars, column: :prod_id, null: false
-    add_foreign_key :comp_rnds, :quarters, column: :quarter_o_id
 
-    add_index :comp_rnds, [:seller_id, :prod_id, :quarter_o_id, :cancelled], name: 'index_comp_rnds_on_buyer_id_as_seller_id'
+    add_index :comp_rnds, [:seller_id, :prod_id, :quarter_o_no, :cancelled], name: 'index_comp_rnds_on_buyer_id_as_seller_id'
     add_index :comp_rnds, [:buyer_id, :prod_id, :cancelled], name: 'index_comp_rnds_on_prod_avail'
     add_index :comp_rnds, [:seller_id, :buyer_id, :prod_id, :cancelled], name: 'index_comp_rnds_on_same_open_contract'
     add_index :comp_rnds, [:buyer_id, :prod_id, :cancelled, :signedS, :signedB], name: 'index_comp_rnds_on_uniqueness'
@@ -44,7 +44,7 @@ class CreateCompRnds < ActiveRecord::Migration[5.0]
 # do not sell to your own company
 # Check that the signed Quarter is the current
 # Check that the selling product is in RnD category
-# Check if someone tries to sell an RnD earlier than when it will be ready and prevent it (earliest quarter_o_id)
+# Check if someone tries to sell an RnD earlier than when it will be ready and prevent it (earliest quarter_o_no)
 # Check that this specific RnD is available at the current quarter (prod_char -> avail)
 # Check that the company has the rights to sell the specific RnD
 # Check that only 1 contract is in prosses for a specific RnD between 2 specific companies. (no duplicates)
@@ -82,12 +82,14 @@ class CreateCompRnds < ActiveRecord::Migration[5.0]
           avail boolean;
           system integer;
           seller_id integer;
-          quarter_o_id integer;
+          quarter_o_no integer;
           resale boolean;
+          quarter_no integer;
         BEGIN
+          SELECT q_no INTO quarter_no FROM quarters WHERE id=NEW.quarter_id;
           IF NEW.buyer_id = NEW.seller_id THEN
             RAISE EXCEPTION 'You cannot sell an item to your company!';
-          ELSEIF (NEW.quarter_o_id<=NEW.quarter_id) OR (NEW.quarterM<NEW.quarter_o_id) THEN
+          ELSEIF (NEW.quarter_o_no<=quarter_no) OR (NEW.quarterM<NEW.quarter_o_no) THEN
                 RAISE EXCEPTION 'Program Error! Quarter obtained is not in the future!';
           END IF;
           avail = (SELECT avail FROM prod_chars WHERE id=NEW.prod_id);
@@ -100,13 +102,13 @@ class CreateCompRnds < ActiveRecord::Migration[5.0]
           system = (SELECT MIN(id) FROM companies);
           IF NEW.seller_id!=system THEN
             seller_id = NULL;
-            SELECT id, quarter_o_id, saleRightsB INTO seller_id, quarter_o_id, resale FROM comp_rnds
+            SELECT id, quarter_o_no, saleRightsB INTO seller_id, quarter_o_no, resale FROM comp_rnds
                 WHERE buyer_id=NEW.seller_id AND prod_id=NEW.prod_id AND cancelled=false AND signedS=true AND signedB=true;
             IF seller_id IS NULL THEN
               RAISE EXCEPTION 'You cannot sell an item that you do not possess!';
             ELSEIF resale IS FALSE THEN
               RAISE EXCEPTION 'You do not have the rights to sell this RnD';
-            ELSEIF NEW.quarter_o_id < quarter_o_id THEN
+            ELSEIF NEW.quarter_o_no < quarter_o_no THEN
               RAISE EXCEPTION 'RnD will not be ready the time you want to sell it.\n Please change the quarter!';           
             END IF;
           END IF;
