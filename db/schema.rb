@@ -976,9 +976,9 @@ ActiveRecord::Schema.define(version: 20181006165001) do
     t.string   "name",                                      null: false
     t.integer  "first_month_id"
     t.integer  "starting_year"
-    t.integer  "duration",        limit: 2
-    t.integer  "trainExtraAvail", limit: 2
-    t.integer  "illPer",          limit: 2
+    t.integer  "duration",        limit: 2,                 null: false
+    t.integer  "trainExtraAvail", limit: 2,                 null: false
+    t.integer  "illPer",          limit: 2,                 null: false
     t.date     "autodelete"
     t.integer  "current_quarter", limit: 2
     t.boolean  "finished",                  default: false
@@ -1218,16 +1218,16 @@ ActiveRecord::Schema.define(version: 20181006165001) do
   create_table "versions", force: :cascade do |t|
     t.integer  "mainNo",                                                                null: false
     t.string   "name",                                                                  null: false
-    t.decimal  "rangeDemandMin",                    precision: 3, scale: 2
-    t.decimal  "rangeDemandMax",                    precision: 3, scale: 2
-    t.integer  "adv_lines_max"
-    t.integer  "funding_amount_default"
-    t.integer  "funding_amount_duration", limit: 2,                         default: 5
-    t.decimal  "illPerRmin",                        precision: 3, scale: 2
-    t.decimal  "illPerRmax",                        precision: 3, scale: 2
-    t.integer  "durationMin",             limit: 2
-    t.integer  "durationMax",             limit: 2
-    t.integer  "durationDef",             limit: 2
+    t.decimal  "rangeDemandMin",                    precision: 3, scale: 2,             null: false
+    t.decimal  "rangeDemandMax",                    precision: 3, scale: 2,             null: false
+    t.integer  "adv_lines_max",                                                         null: false
+    t.integer  "funding_amount_default",                                                null: false
+    t.integer  "funding_amount_duration", limit: 2,                         default: 5, null: false
+    t.decimal  "illPerRmin",                        precision: 3, scale: 2,             null: false
+    t.decimal  "illPerRmax",                        precision: 3, scale: 2,             null: false
+    t.integer  "durationMin",             limit: 2,                                     null: false
+    t.integer  "durationMax",             limit: 2,                                     null: false
+    t.integer  "durationDef",             limit: 2,                                     null: false
     t.datetime "created_at",                                                            null: false
     t.datetime "updated_at",                                                            null: false
     t.index ["mainNo"], name: "index_versions_on_mainNo", using: :btree
