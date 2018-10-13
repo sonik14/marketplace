@@ -12,7 +12,7 @@ class Company < ApplicationRecord
   has_many :comp_qs
   has_many :comp_q_cust_cities
 
-  validates :name, uniqueness: {scope: :game}
+  validates :name, uniqueness: {scope: :game}, allow_nil: true
   validates :ceo, uniqueness: {scope: :game}, presence: true
 =begin
   before_create :check_continent

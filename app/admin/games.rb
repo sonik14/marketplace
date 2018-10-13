@@ -45,6 +45,10 @@ ActiveAdmin.register Game do
 	  	game = Game.find(params[:id])
 		q = Quarter.where(game_id: game.id).order(q_no: :desc).take
 		if q.nil? 
+			if Company.where(game_id: game.id).count < 2
+	  			redirect_to(admin_game_path(game.id), flash: {error: "You must select at least 2 CEO\'s before beginning the Game."})
+	  			return
+			end
 			q_no = 1
 			Customer.all.each do |customer|
 				CustG.create!(
