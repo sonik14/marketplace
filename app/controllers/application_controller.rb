@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
 	def ensure_moderator!
 	  unless current_user and Role.find(current_user.role_id).name === 'moderator'
 	    if Role.find(current_user.role_id).name === 'admin'
-	      redirect_to(admin_root_path, flash: {:error => 'You don\'t have access to reach Admin Tabs! You have been redirected.'})
+	      redirect_to(admin_root_path, flash: {:error => 'You don\'t have access to reach Moderator Tabs! You have been redirected.'})
 	    else
 	      redirect_to('/')
 	    end
@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
 	def ensure_admin!
 	  unless current_user and Role.find(current_user.role_id).name === 'admin'
 	    if Role.find(current_user.role_id).name === 'moderator'
-	      redirect_to(data_root_path, flash: {:error => 'You don\'t have access to reach Moderator Tabs! You have been redirected.'})
+	      redirect_to(data_root_path, flash: {:error => 'You don\'t have access to reach Admin Tabs! You have been redirected.'})
 	    else
 	      redirect_to('/')
 	    end
