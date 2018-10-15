@@ -172,7 +172,7 @@ ActiveAdmin.register Game do
 					end
 					productScores.stringify_keys!()
 					for l in 0..productsNo
-						selectProd = rand(0..100)
+						selectProd = rand(0...100)
 #						pr_no = sortedPr[cust_no][l]
 						pr_no = -1
 
@@ -190,7 +190,7 @@ ActiveAdmin.register Game do
 
 						score = products[pr_no][cust_no]
 						demandSProdArr[pr_no] = demandSProdArr[pr_no].to_i + 1
-						if selectProd <= score
+						if selectProd < score
 							buySProdArr[pr_no] = buySProdArr[pr_no].to_i + 1
 							break
 						else
