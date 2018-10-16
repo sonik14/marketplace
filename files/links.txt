@@ -1,0 +1,17 @@
+presentation:
+https://prezi.com/p/yambzgb8b4oa/
+
+graph_link:
+https://www.youtube.com/watch?time_continue=8&v=v2oyUwQpA-E
+
+admin_link:
+https://youtu.be/_xkqpbss9Ho
+
+admin_link_alt:
+https://youtu.be/9OSq5T9uUro
+
+admin_link_constraints:
+https://youtu.be/oNrd_-xSEp0
+
+model_link:
+https://youtu.be/aSo85BxXL38
