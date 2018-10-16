@@ -50,7 +50,7 @@ ActiveAdmin.register FunctionG do
       f.input :parC, label: "Par C: #{function.parCname} (Range: #{function.parCmin}-#{function.parCmax}) [Round to: #{function.parCscale} Decimal Points]", 
                min: function.parCmin, max: function.parCmax, step: 1.0/(10**function.parCscale), input_html: {disabled: q_max > 1 ? true : false} unless function_id.nil? || function.parCdef.nil?
       f.input :parD, label: "Par D: #{function.parDname} (Range: #{function.parDmin}-#{function.parDmax}) [Round to: #{function.parDscale} Decimal Points]", 
-               min: function.parDmin, max: function.parDmax, step: 1.0/(10**function.parDscale), input_html: {disabled: q_max > 1 ? true : false} unless function_id.nil? || function.parDdef.nil?
+               min: function.parDmin, max: function.parDmax, step: 1.0/(10**function.parDscale), input_html: {disabled: true} unless function_id.nil? || function.parDdef.nil?
     end
 	  f.actions do
       if function_id.nil?

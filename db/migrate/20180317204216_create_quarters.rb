@@ -7,7 +7,7 @@ class CreateQuarters < ActiveRecord::Migration[5.0]
       t.string :name
 
       t.decimal :rangeDemandPer, unsigned: true, precision: 2, scale: 0
-      
+
       t.integer :fundingAmountMax, unsigned: true
       t.timestamps
     end

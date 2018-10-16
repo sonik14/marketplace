@@ -57,7 +57,7 @@ ActiveAdmin.register CustGFunc do
       f.input :parC, label: "Par C: #{function.parCname} (Range: #{cust_func.parCmin}-#{cust_func.parCmax}) [Round to: #{function.parCscale} Decimal Points]", 
       		     min: cust_func.parCmin, max: cust_func.parCmax, step: 1.0/(10**function.parCscale), input_html: {disabled: q_max > 1 ? true : false} unless function_id.nil? || cust_func.parCdef.nil?
       f.input :parD, label: "Par D: #{function.parDname} (Range: #{cust_func.parDmin}-#{cust_func.parDmax}) [Round to: #{function.parDscale} Decimal Points]", 
-      		     min: cust_func.parDmin, max: cust_func.parDmax, step: 1.0/(10**function.parDscale), input_html: {disabled: q_max > 1 ? true : false} unless function_id.nil? || cust_func.parDdef.nil?
+      		     min: cust_func.parDmin, max: cust_func.parDmax, step: 1.0/(10**function.parDscale), input_html: {disabled: true} unless function_id.nil? || cust_func.parDdef.nil?
     end
 	  f.actions do
       if function_id.nil?
